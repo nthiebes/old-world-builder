@@ -20,18 +20,6 @@
             "name_it": "Skaven Warlord or Grey Seer per 1000 points",
             "name_pl": "Skaven Warlord or Grey Seer per 1000 points"
           }
-        },
-        "sk-renegade": {
-          "category": "characters",
-          "notes": {
-            "name_en": "0-1 Skaven Warlord or Clan Eshin Master Assassin per 1000 points",
-            "name_cn": "每1000分0-1斯卡文军阀",
-            "name_de": "0-1 Skaven Warlord per 1000 points",
-            "name_es": "0-1 Skaven Warlord per 1000 points",
-            "name_fr": "0-1 Seigneur de Guerre par tranche de 1000 points",
-            "name_it": "0-1 Skaven Warlord per 1000 points",
-            "name_pl": "0-1 Skaven Warlord per 1000 points"
-          }
         }
       },
       "command": [
@@ -133,12 +121,137 @@
       }
     },
     {
+      "name_en": "Skaven Warlord {renegade}",
+      "name_cn": "斯卡文军阀",
+      "name_de": "Kriegsherr der Skaven",
+      "name_es": "Skaven Warlord",
+      "name_fr": "Seigneur de Guerre",
+      "id": "skaven-warlord-renegade",
+      "armyComposition": {
+        "sk-renegade": {
+          "category": "characters"
+        }
+      },
+      "points": 90,
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_cn": "单手武器",
+          "name_de": "Handwaffe",
+          "name_es": "Hand weapon",
+          "name_fr": "Arme de base",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
+          "name_de": "Zusätzliche Handwaffe",
+          "name_es": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
+          "points": 3
+        },
+        {
+          "name_en": "Great weapon",
+          "name_cn": "重型武器",
+          "name_de": "Zweihandwaffe",
+          "name_es": "Great weapon",
+          "name_fr": "Arme lourde",
+          "points": 4
+        },
+        {
+          "name_en": "Halberd",
+          "name_cn": "长戟",
+          "name_de": "Hellebarde",
+          "name_es": "Halberd",
+          "name_fr": "Hallebarde",
+          "points": 3
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Leichte Rüstung",
+          "name_es": "Light armour",
+          "name_fr": "Armure légère",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_cn": "重甲",
+          "name_de": "Schwere Rüstung",
+          "name_es": "Heavy armour",
+          "name_fr": "Armure lourde",
+          "points": 3
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_cn": "盾牌",
+          "name_de": "Schild",
+          "name_es": "Shield",
+          "name_fr": "Bouclier",
+          "points": 2,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 100
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Scurry Away, Verminous Valour {renegade}, Warband, Warpstone Weapons",
+        "name_cn": "抱头鼠窜, 首鼠两端, 战帮, 次元石武器",
+        "name_de": "Nichts wie weg!, Rattenhafter Wagemut, Kriegerschar, Warpsteinwaffen",
+        "name_es": "¡Sálvese quien pueda!, Valor Verminoso, Partida de Guerra, Armas de piedra bruja",
+        "name_fr": "Sauve qui Peut!, Courageux mais pas Téméraire, Bande de Guerre, Armes à base de Malepierre"
+      },
+      "notes": {
+        "name_en": "0-1 Skaven Warlord or Clan Eshin Master Assassin per 1000 points",
+        "name_cn": "每1000分0-1斯卡文军阀",
+        "name_de": "0-1 Skaven Warlord per 1000 points",
+        "name_es": "0-1 Skaven Warlord per 1000 points",
+        "name_fr": "0-1 Seigneur de Guerre par tranche de 1000 points",
+        "name_it": "0-1 Skaven Warlord per 1000 points",
+        "name_pl": "0-1 Skaven Warlord per 1000 points"
+      }
+    },
+    {
       "name_en": "Skaven Chieftain",
       "name_cn": "斯卡文族长",
       "name_de": "Häuptling der Skaven",
       "name_es": "Skaven Chieftain",
       "name_fr": "Chef Skaven",
       "id": "skaven-chieftain",
+      "armyComposition": {
+        "skaven": {
+          "category": "characters"
+        }
+      },
       "points": 45,
       "command": [
         {
@@ -257,6 +370,135 @@
       }
     },
     {
+      "name_en": "Skaven Chieftain {renegade}",
+      "name_cn": "斯卡文族长",
+      "name_de": "Häuptling der Skaven",
+      "name_es": "Skaven Chieftain",
+      "name_fr": "Chef Skaven",
+      "id": "skaven-chieftain-renegade",
+      "armyComposition": {
+        "sk-renegade": {
+          "category": "characters"
+        }
+      },
+      "points": 45,
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_cn": "战旗手",
+          "name_de": "Battle Standard Bearer",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          },
+          "name_fr": "Porteur de la Grande Bannière"
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_cn": "单手武器",
+          "name_de": "Handwaffe",
+          "name_es": "Hand weapon",
+          "name_fr": "Arme de base",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
+          "name_de": "Zusätzliche Handwaffe",
+          "name_es": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
+          "points": 3
+        },
+        {
+          "name_en": "Great weapon",
+          "name_cn": "重型武器",
+          "name_de": "Zweihandwaffe",
+          "name_es": "Great weapon",
+          "name_fr": "Arme lourde",
+          "points": 4
+        },
+        {
+          "name_en": "Halberd",
+          "name_cn": "长戟",
+          "name_de": "Hellebarde",
+          "name_es": "Halberd",
+          "name_fr": "Hallebarde",
+          "points": 3
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Leichte Rüstung",
+          "name_es": "Light armour",
+          "name_fr": "Armure légère",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_cn": "重甲",
+          "name_de": "Schwere Rüstung",
+          "name_es": "Heavy armour",
+          "name_fr": "Armure lourde",
+          "points": 3
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_cn": "盾牌",
+          "name_de": "Schild",
+          "name_es": "Shield",
+          "name_fr": "Bouclier",
+          "points": 2,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Scurry Away, Verminous Valour {renegade}, Warband, Warpstone Weapons",
+        "name_cn": "抱头鼠窜, 首鼠两端, 战帮, 次元石武器",
+        "name_de": "Nichts wie weg!, Rattenhafter Wagemut, Kriegerschar, Warpsteinwaffen",
+        "name_es": "¡Sálvese quien pueda!, Valor Verminoso, Partida de Guerra, Armas de piedra bruja",
+        "name_fr": "Sauve qui Peut!, Courageux mais pas Téméraire, Bande de Guerre, Armes à base de Malepierre"
+      },
+      "notes": {
+        "name_en": "",
+        "name_cn": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
       "name_en": "Grey Seer",
       "name_cn": "灰先知",
       "name_de": "Grauer Prophet",
@@ -344,7 +586,7 @@
           "active": true
         },
         {
-          "name_en": "Screaming Bell {renegade}",
+          "name_en": "Screaming Bell",
           "name_cn": "尖啸巨钟",
           "name_de": "Höllenglocke",
           "name_es": "Screaming Bell",
@@ -378,7 +620,7 @@
         "illusion"
       ],
       "specialRules": {
-        "name_en": "Lore of the Horned Rat {renegade}, Magical Attacks, Magic Resistance (-1), Scurry Away, Verminous Valour, Warband, Warpstone Weapons (not for the mount)",
+        "name_en": "Lore of the Horned Rat, Magical Attacks, Magic Resistance (-1), Scurry Away, Verminous Valour, Warband, Warpstone Weapons (not for the mount)",
         "name_cn": "大角鼠法系, 魔法攻击, 魔法抗性(-1), 抱头鼠窜, 首鼠两端, 战帮, 次元石武器(不适用于此模型的坐骑)",
         "name_de": "Lehre der Gehörnten Ratte, Magische Attacken, Magieresistenz (-1), Nichts wie weg!, Rattenhafter Wagemut, Kriegerschar, Warpsteinwaffen (nicht für das Reittier)",
         "name_es": "Saber de la Rata Cornuda, Ataques Mágicos, Resistencia a la Magia (-1), ¡Sálvese quien pueda!, Valor Verminoso, Partida de Guerra, Armas de piedra bruja (no para la montura)",
@@ -393,27 +635,18 @@
       }
     },
     {
-      "name_en": "Grey Seer",
+      "name_en": "Grey Seer {renegade}",
       "name_cn": "灰先知",
       "name_de": "Grauer Prophet",
       "name_es": "Grey Seer",
       "name_fr": "Prophète Gris",
       "id": "grey-seer-renegade",
-      "points": 155,
       "armyComposition": {
         "sk-renegade": {
-          "category": "characters",
-          "notes": {
-            "name_en": "0-1 Grey Seer per 1000 points",
-            "name_cn": "每1000分0-1 Grey Seer",
-            "name_de": "0-1 Grey Seer per 1000 points",
-            "name_es": "0-1 Grey Seer per 1000 points",
-            "name_fr": "0-1 Prophète Gris par tranche de 1000 points",
-            "name_it": "0-1 Grey Seer per 1000 points",
-            "name_pl": "0-1 Grey Seer per 1000 points"
-          }
+          "category": "characters"
         }
       },
+      "points": 155,
       "command": [
         {
           "name_en": "General",
@@ -426,7 +659,7 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapon, Warpstone Tokens (D3)",
+          "name_en": "Hand weapon, Warpstone Tokens {renegade} (D3)",
           "name_cn": "单手武器, 次元石块(D3)",
           "name_de": "Handwaffe, Warpstone Tokens (D3)",
           "name_es": "Hand weapon, Warpstone Tokens (D3)",
@@ -514,18 +747,20 @@
         "illusion"
       ],
       "specialRules": {
-        "name_en": "Lore of the Horned Rat {renegade}, Magical Attacks, Magic Resistance (-1), Scurry Away, Verminous Valour, Warband, Warpstone Weapons (not for the mount)",
+        "name_en": "Lore of the Horned Rat {renegade}, Magical Attacks, Magic Resistance (-1), Scurry Away, Verminous Valour {renegade}, Warband, Warpstone Weapons (not for the mount)",
         "name_cn": "大角鼠法系, 魔法攻击, 魔法抗性(-1), 抱头鼠窜, 首鼠两端, 战帮, 次元石武器(不适用于此模型的坐骑)",
         "name_de": "Lehre der Gehörnten Ratte, Magische Attacken, Magieresistenz (-1), Nichts wie weg!, Rattenhafter Wagemut, Kriegerschar, Warpsteinwaffen (nicht für das Reittier)",
         "name_es": "Saber de la Rata Cornuda, Ataques Mágicos, Resistencia a la Magia (-1), ¡Sálvese quien pueda!, Valor Verminoso, Partida de Guerra, Armas de piedra bruja (no para la montura)",
         "name_fr": "Domaine du Rat Cornu, Attaques Magiques, Résistance à la Magie (-1), Sauve qui Peut!, Courageux mais pas Téméraire, Bande de Guerre, Armes à base de Malepierre (ne s’applique pas à la monture)"
       },
       "notes": {
-        "name_en": "0-1 per 1000 points",
-        "name_cn": "每1000分0-1",
-        "name_de": "0-1 pro 1000 Punkte",
-        "name_es": "0-1 per 1000 points",
-        "name_fr": "0-1 par tranche de 1000 points"
+        "name_en": "0-1 Grey Seer per 1000 points",
+        "name_cn": "每1000分0-1 Grey Seer",
+        "name_de": "0-1 Grey Seer per 1000 points",
+        "name_es": "0-1 Grey Seer per 1000 points",
+        "name_fr": "0-1 Prophète Gris par tranche de 1000 points",
+        "name_it": "0-1 Grey Seer per 1000 points",
+        "name_pl": "0-1 Grey Seer per 1000 points"
       }
     },
     {
@@ -649,7 +884,7 @@
       ],
       "lores": ["battle-magic", "elementalism"],
       "specialRules": {
-        "name_en": "Lore of the Horned Rat {renegade}, Magical Attacks, Scurry Away, Verminous Valour, Warband, Warpstone Weapons",
+        "name_en": "Lore of the Horned Rat, Magical Attacks, Scurry Away, Verminous Valour, Warband, Warpstone Weapons",
         "name_cn": "大角鼠法系, 魔法攻击, 抱头鼠窜, 首鼠两端, 战帮, 次元石武器",
         "name_de": "Lehre der Gehörnten Ratte, Magische Attacken, Nichts wie weg!, Rattenhafter Wagemut, Kriegerschar, Warpsteinwaffen",
         "name_es": "Saber de la Rata Cornuda, Ataques Mágicos, ¡Sálvese quien pueda!, Valor Verminoso, Partida de Guerra, Armas de piedra bruja",
@@ -663,12 +898,12 @@
       "name_es": "Warlock Engineer",
       "name_fr": "Technomage",
       "id": "warlock-engineer-renegade",
-      "points": 35,
       "armyComposition": {
         "sk-renegade": {
           "category": "characters"
         }
       },
+      "points": 35,
       "command": [
         {
           "name_en": "General",
@@ -706,12 +941,12 @@
           "points": 6
         },
         {
-          "name_en": "Hand weapon, Doomrocket",
+          "name_en": "Hand weapon, Doomrocket {renegade}",
           "name_cn": "单手武器, 毁灭火箭",
           "name_de": "Handwaffe, Todesrakete",
           "name_es": "Hand weapon, Doomrocket",
           "name_fr": "Arme de base, Fusée Infernale",
-          "points": 6,
+          "points": 35,
           "notes": {
             "name_en": "0-1 per army",
             "name_cn": "每支军队0-1",
@@ -753,7 +988,7 @@
           ]
         },
         {
-          "name_en": "Warpstone Tokens (D3)",
+          "name_en": "Warpstone Tokens {renegade} (D3)",
           "name_cn": "次元石块(D3)",
           "name_de": "Warpsteinhappen (D3)",
           "name_es": "Warpstone Tokens (D3)",
@@ -762,7 +997,7 @@
           "alwaysActive": true
         },
         {
-          "name_en": "Warlock Optics",
+          "name_en": "Warlock Optics {renegade}",
           "name_cn": "术士光学镜",
           "name_de": "Warlock-Optik",
           "name_es": "Warlock Optics",
@@ -791,7 +1026,7 @@
       ],
       "lores": ["battle-magic", "elementalism"],
       "specialRules": {
-        "name_en": "Lore of the Horned Rat {renegade}, Magical Attacks, Scurry Away, Verminous Valour, Warband, Warpstone Weapons",
+        "name_en": "Lore of the Horned Rat {renegade}, Magical Attacks, Scurry Away, Verminous Valour {renegade}, Warband, Warpstone Weapons",
         "name_cn": "大角鼠法系, 魔法攻击, 抱头鼠窜, 首鼠两端, 战帮, 次元石武器",
         "name_de": "Lehre der Gehörnten Ratte, Magische Attacken, Nichts wie weg!, Rattenhafter Wagemut, Kriegerschar, Warpsteinwaffen",
         "name_es": "Saber de la Rata Cornuda, Ataques Mágicos, ¡Sálvese quien pueda!, Valor Verminoso, Partida de Guerra, Armas de piedra bruja",
@@ -870,16 +1105,16 @@
       "name_es": "Master Assassin",
       "name_fr": "Maître Assassin",
       "id": "master-assassin-renegade",
-      "points": 120,
       "armyComposition": {
         "sk-renegade": {
           "category": "characters"
         }
       },
+      "points": 120,
       "command": [],
       "equipment": [
         {
-          "name_en": "Hand weapons, Throwing weapons",
+          "name_en": "Hand weapon, Throwing weapons",
           "name_cn": "单手武器, 投掷武器",
           "name_de": "Handwaffen, Wurfwaffen",
           "name_es": "Hand weapons, Throwing weapons",
@@ -905,11 +1140,11 @@
       ],
       "lores": [],
       "specialRules": {
-        "name_en": "Ambushers, Eshin Infiltration, Evasive, Feigned Flight, Fire & Flee, Hidden {skaven}, Move Through Cover, Poisoned Attacks, Scurry Away, Verminous Valour, Warpstone Weapons, Strike First, Dodge",
-        "name_cn": "伏击, 埃辛渗透, 闪避, 诱敌诈退, 游击, 隐藏, 穿行掩体, 淬毒攻击, 抱头鼠窜, 首鼠两端, 次元石武器, 先攻, 闪避",
-        "name_de": "Überfall, Eshin-Infiltration, Ausweichen, Vorgetäuschte Flucht, Schießen und Verschwinden, Versteckt, Durch Deckung bewegen, Giftattacken, Nichts wie weg!, Rattenhafter Wagemut, Warpsteinwaffen, Schlägt zuerst zu, Ausweichmanöver",
-        "name_es": "Emboscada, Infiltración Eshin, Evasivo, Huida Simulada, Disparar y Huir, Oculto, Mover a Través de Cobertura, Ataques envenenados, ¡Sálvese quien pueda!, Valor Verminoso, Armas de piedra bruja, Golpea Primero, Esquiva",
-        "name_fr": "Embusqueurs, Infiltration Eshin, Esquiveur, Fuite Feinte, Tir & Fuite, Caché, Mouvement à Couvert, Attaques Empoisonnées, Sauve qui Peut!, Courageux mais pas Téméraire, Armes à base de Malepierre, Frappe En Premier, Esquive"
+        "name_en": "Ambushers, Eshin Infiltration {renegade}, Evasive, Feigned Flight, Fire & Flee, Hidden {skaven}, Move Through Cover, Poisoned Attacks, Scurry Away, Verminous Valour {renegade}, Warpstone Weapons, Strike First, Dodge {renegade}",
+        "name_cn": "Ambushers, Eshin Infiltration, Evasive, Feigned Flight, Fire & Flee, Hidden {skaven}, Move Through Cover, Poisoned Attacks, Scurry Away, Verminous Valour, Warpstone Weapons, Strike First, Dodge",
+        "name_de": "Ambushers, Eshin Infiltration, Evasive, Feigned Flight, Fire & Flee, Hidden {skaven}, Move Through Cover, Poisoned Attacks, Scurry Away, Verminous Valour, Warpstone Weapons, Strike First, Dodge",
+        "name_es": "Ambushers, Eshin Infiltration, Evasive, Feigned Flight, Fire & Flee, Hidden {skaven}, Move Through Cover, Poisoned Attacks, Scurry Away, Verminous Valour, Warpstone Weapons, Strike First, Dodge",
+        "name_fr": "Ambushers, Eshin Infiltration, Evasive, Feigned Flight, Fire & Flee, Hidden {skaven}, Move Through Cover, Poisoned Attacks, Scurry Away, Verminous Valour, Warpstone Weapons, Strike First, Dodge"
       },
       "notes": {
         "name_en": "0-1 Skaven Warlord or Clan Eshin Master Assassin per 1,000 points",
@@ -939,9 +1174,6 @@
             "name_it": "0-1 Clan Skryre Warlock Engineer, Clan Eshin Master Assassin or Clan Pestilens Plague Priest per 1000 points",
             "name_pl": "0-1 Clan Skryre Warlock Engineer, Clan Eshin Master Assassin or Clan Pestilens Plague Priest per 1000 points"
           }
-        },
-        "sk-renegade": {
-          "category": "characters"
         }
       },
       "command": [
@@ -1024,6 +1256,134 @@
           "active": true
         },
         {
+          "name_en": "Plague Furnace",
+          "name_cn": "瘟疫熔炉",
+          "name_de": "Seuchenmenetekel",
+          "name_es": "Plague Furnace",
+          "name_fr": "Creuset de la Peste",
+          "points": 170
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_cn": "魔法物品",
+          "name_de": "Magische Gegenstände",
+          "name_es": "Objetos mágicos",
+          "name_fr": "Objets Magiques",
+          "types": [
+            "weapon",
+            "talisman",
+            "enchanted-item",
+            "armor-mages",
+            "arcane-item"
+          ],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
+      "lores": ["daemonology", "battle-magic", "dark-magic"],
+      "specialRules": {
+        "name_en": "Cloud of Flies, Frenzy, Lore of the Horned Rat, Magical Attacks, Scurry Away, Verminous Valour, Warband, Warpstone Weapons (not for the mount)",
+        "name_cn": "蝇之云, 狂暴, 大角鼠法系, 魔法攻击, 抱头鼠窜, 首鼠两端, 战帮, 次元石武器(不适用于此模型的坐骑)",
+        "name_de": "Fliegenschwarm, Raserei, Lehre der Gehörnten Ratte, Magische Attacken, Nichts wie weg!, Rattenhafter Wagemut, Kriegerschar, Warpsteinwaffen (nicht für das Reittier)",
+        "name_es": "Nube de Moscas, Furia asesina, Saber de la Rata Cornuda, Ataques Mágicos, ¡Sálvese quien pueda!, Valor Verminoso, Partida de Guerra, Armas de piedra bruja (no para la montura)",
+        "name_fr": "Nuage de Mouches, Frénésie, Domaine du Rat Cornu, Attaques Magiques, Sauve qui Peut!, Courageux mais pas Téméraire, Bande de Guerre, Armes à base de Malepierre (ne s’applique pas à la monture)"
+      }
+    },
+    {
+      "name_en": "Plague Priest {renegade}",
+      "name_cn": "瘟疫祭司",
+      "name_de": "Seuchenpriester",
+      "name_es": "Plague Priest",
+      "name_fr": "Prêtre de la Peste",
+      "id": "plague-priest-renegade",
+      "armyComposition": {
+        "sk-renegade": {
+          "category": "characters"
+        }
+      },
+      "points": 60,
+      "command": [
+        {
+          "name_en": "General",
+          "name_cn": "主将",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_cn": "单手武器",
+          "name_de": "Handwaffe",
+          "name_es": "Hand weapon",
+          "name_fr": "Arme de base",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_cn": "额外单手武器",
+          "name_de": "Zusätzliche Handwaffe",
+          "name_es": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
+          "points": 3
+        },
+        {
+          "name_en": "Hand weapon, Plague censer {renegade}",
+          "name_cn": "单手武器, 瘟疫香炉",
+          "name_de": "Handwaffe, Seuchenschleuder",
+          "name_es": "Hand weapon, Plague censer",
+          "name_fr": "Arme de base, Encensoir à Peste",
+          "points": 6
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Wizard",
+          "name_cn": "法师",
+          "name_de": "Wizard",
+          "name_fr": "Sorcier",
+          "name_es": "Hechicero",
+          "points": 0,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_cn": "1级法师",
+              "name_de": "Level 1 Wizard",
+              "name_fr": "Sorcier de Niveau 1",
+              "name_es": "Hechicero de Nivel 1",
+              "points": 30,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 2 Wizard",
+              "name_cn": "2级法师",
+              "name_de": "Level 2 Wizard",
+              "name_fr": "Sorcier de Niveau 2",
+              "name_es": "Hechicero de Nivel 2",
+              "points": 60,
+              "exclusive": true
+            }
+          ]
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_cn": "步行",
+          "name_de": "Zu Fuß",
+          "name_es": "On foot",
+          "name_fr": "À Pied",
+          "points": 0,
+          "active": true
+        },
+        {
           "name_en": "Plague Furnace {renegade}",
           "name_cn": "瘟疫熔炉",
           "name_de": "Seuchenmenetekel",
@@ -1052,7 +1412,7 @@
       ],
       "lores": ["daemonology", "battle-magic", "dark-magic"],
       "specialRules": {
-        "name_en": "Cloud of Flies, Frenzy, Lore of the Horned Rat {renegade}, Magical Attacks, Scurry Away, Verminous Valour, Warband, Warpstone Weapons (not for the mount)",
+        "name_en": "Cloud of Flies, Frenzy, Lore of the Horned Rat {renegade}, Magical Attacks, Scurry Away, Verminous Valour {renegade}, Warband, Warpstone Weapons (not for the mount)",
         "name_cn": "蝇之云, 狂暴, 大角鼠法系, 魔法攻击, 抱头鼠窜, 首鼠两端, 战帮, 次元石武器(不适用于此模型的坐骑)",
         "name_de": "Fliegenschwarm, Raserei, Lehre der Gehörnten Ratte, Magische Attacken, Nichts wie weg!, Rattenhafter Wagemut, Kriegerschar, Warpsteinwaffen (nicht für das Reittier)",
         "name_es": "Nube de Moscas, Furia asesina, Saber de la Rata Cornuda, Ataques Mágicos, ¡Sálvese quien pueda!, Valor Verminoso, Partida de Guerra, Armas de piedra bruja (no para la montura)",
@@ -1184,35 +1544,17 @@
       "name_es": "Stormvermin",
       "name_fr": "Vermines de choc",
       "id": "stormvermin-core-renegade",
+      "armyComposition": {
+        "sk-renegade": {
+          "category": "core"
+        }
+      },
       "points": 9,
       "minimum": 10,
       "maximum": 0,
       "regimentalUnit": true,
       "maxDetachments": 1,
-      "allowedDetachments": ["weapon-team"],
-      "armyComposition": {
-        "sk-renegade": {
-          "category": "core",
-          "specialRules": {
-            "name_en": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit",
-            "name_cn": "紧密阵型, 部群, 抱头鼠窜, 战帮, 次元石武器, 主团单位",
-            "name_de": "Geschlossene Ränge, Horde, Nichts wie weg!, Kriegerschar, Warpsteinwaffen, Hauptregiment",
-            "name_es": "Formación Cerrada, Horda, ¡Sálvese quien pueda!, Partida de Guerra, Armas de piedra bruja, Unidad Regimental",
-            "name_fr": "Ordre Serré, Horde, Sauve qui Peut!, Bande de Guerre, Armes à base de Malepierre, Unité Régimentaire",
-            "name_it": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit",
-            "name_pl": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit"
-          },
-          "notes": {
-            "name_en": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of Plague Monks if army includes a Plague Priest",
-            "name_cn": "如果你的军队包含1个斯卡文军阀，则0-1单位的风暴鼠或者如果你的军队包含1个瘟疫祭司，则0-1单位的瘟疫僧",
-            "name_de": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of Plague Monks if army includes a Plague Priest",
-            "name_es": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of Plague Monks if army includes a Plague Priest",
-            "name_fr": "0-1 unité de Vermines de choc si votre armée inclut un Seigneur de Guerre OU 0-1 unité de Moines de la Peste si votre armée inclut un Prêtre de la Peste",
-            "name_it": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of Plague Monks if army includes a Plague Priest",
-            "name_pl": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of Plague Monks if army includes a Plague Priest"
-          }
-        }
-      },
+      "allowedDetachments": ["weapon-team-renegade"],
       "command": [
         {
           "name_en": "Fangleader (champion)",
@@ -1293,23 +1635,39 @@
       ],
       "mounts": [],
       "items": [],
-      "lores": []
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit",
+        "name_cn": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit",
+        "name_de": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit",
+        "name_es": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit",
+        "name_fr": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit"
+      },
+      "notes": {
+        "name_en": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of Plague Monks if army includes a Plague Priest",
+        "name_cn": "如果你的军队包含1个斯卡文军阀，则0-1单位的风暴鼠或者如果你的军队包含1个瘟疫祭司，则0-1单位的瘟疫僧",
+        "name_de": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of Plague Monks if army includes a Plague Priest",
+        "name_es": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of Plague Monks if army includes a Plague Priest",
+        "name_fr": "0-1 unité de Vermines de choc si votre armée inclut un Seigneur de Guerre OU 0-1 unité de Moines de la Peste si votre armée inclut un Prêtre de la Peste",
+        "name_it": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of Plague Monks if army includes a Plague Priest",
+        "name_pl": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of Plague Monks if army includes a Plague Priest"
+      }
     },
     {
-      "name_en": "Skaven Dregs",
+      "name_en": "Skaven Dregs {renegade}",
       "name_cn": "Skaven Dregs",
       "name_de": "Skaven Dregs",
       "name_es": "Skaven Dregs",
       "name_fr": "Skaven Dregs",
       "id": "skaven-dregs-renegade",
-      "points": 2,
-      "minimum": 20,
-      "maximum": 40,
       "armyComposition": {
         "sk-renegade": {
           "category": "core"
         }
       },
+      "points": 2,
+      "minimum": 20,
+      "maximum": 40,
       "command": [
         {
           "name_en": "Packmaster (champion)",
@@ -1317,17 +1675,32 @@
           "name_de": "Meutenbändiger (champion)",
           "name_es": "Packmaster (champion)",
           "name_fr": "Chef de meute (champion)",
-          "points": 5,
-          "options": [
-            {
-              "name_en": "Master Moulder (champion)",
-              "name_cn": "莫德尔训鼠大师 (champion)",
-              "name_de": "Meisterzüchter (champion)",
-              "name_es": "Master Moulder (champion)",
-              "name_fr": "Maître corrupteur (champion)",
-              "points": 20
-            }
-          ]
+          "points": 5
+        },
+        {
+          "name_en": "Master Moulder (champion)",
+          "name_cn": "莫德尔训鼠大师 (champion)",
+          "name_de": "Meisterzüchter (champion)",
+          "name_es": "Master Moulder (champion)",
+          "name_fr": "Maître corrupteur (champion)",
+          "points": 20,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "arcane-item",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          },
+          "notes": {
+            "name_en": "Upgrade for one Packmaster",
+            "name_cn": "将一个鼠群饲主升级为",
+            "name_de": "Aufwertung für einen Meutenbändiger",
+            "name_es": "Upgrade for one Packmaster",
+            "name_fr": "Amélioration pour un Chef de meute"
+          }
         },
         {
           "name_en": "Musician",
@@ -1384,13 +1757,13 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Levies, Horde, Scurry Away, Expendable, Cornered Rats, Loner",
-        "name_cn": "Close Order, Levies, Horde, Scurry Away, Expendable, Cornered Rats, Loner",
-        "name_de": "Geschlossene Ränge, Gesindel, Horde, Nichts wie weg!, Entbehrlich, In die Enge getriebene Ratten, Einzelgänger",
-        "name_es": "Formación Cerrada, Levas, Horda, ¡Sálvese quien pueda!, Prescindible, Ratas Acorraladas, Solitario",
-        "name_fr": "Close Order, Levies, Horde, Scurry Away, Expendable, Cornered Rats, Loner",
-        "name_it": "Close Order, Levies, Horde, Scurry Away, Expendable, Cornered Rats, Loner",
-        "name_pl": "Close Order, Levies, Horde, Scurry Away, Expendable, Cornered Rats, Loner"
+        "name_en": "Close Order, Levies, Horde, Scurry Away, Expendable {renegade}, Cornered Rats {renegade}, Loner, Leader of the Pack {renegade}, Verminous Valour {renegade} (Master Moulder only)",
+        "name_cn": "Close Order, Levies, Horde, Scurry Away, Expendable, Cornered Rats, Loner, Leader of the Pack, Verminous Valour (Master Moulder only)",
+        "name_de": "Close Order, Levies, Horde, Scurry Away, Expendable, Cornered Rats, Loner, Leader of the Pack, Verminous Valour (Master Moulder only)",
+        "name_es": "Close Order, Levies, Horde, Scurry Away, Expendable, Cornered Rats, Loner, Leader of the Pack, Verminous Valour (Master Moulder only)",
+        "name_fr": "Close Order, Levies, Horde, Scurry Away, Expendable, Cornered Rats, Loner, Leader of the Pack, Verminous Valour (Master Moulder only)",
+        "name_it": "Close Order, Levies, Horde, Scurry Away, Expendable, Cornered Rats, Loner, Leader of the Pack, Verminous Valour (Master Moulder only)",
+        "name_pl": "Close Order, Levies, Horde, Scurry Away, Expendable, Cornered Rats, Loner, Leader of the Pack, Verminous Valour (Master Moulder only)"
       },
       "notes": {
         "name_en": "0-1 Skaven Dregs for each unit of Clanrats taken.",
@@ -1401,7 +1774,7 @@
       }
     },
     {
-      "name_en": "Clanrats {renegade}",
+      "name_en": "Clanrats",
       "name_cn": "氏族鼠",
       "name_de": "Klanratten",
       "name_es": "Clanrats",
@@ -1425,19 +1798,6 @@
             "name_it": "1+ per 1000 points",
             "name_pl": "1+ per 1000 points"
           }
-        },
-        "sk-renegade": {
-          "category": "core",
-          "maximum": 0,
-          "specialRules": {
-            "name_en": "Close Order, Horde, Scurry Away, Warband, Regimental Unit",
-            "name_cn": "紧密阵型, 部群, 抱头鼠窜, 战帮, 主团单位",
-            "name_de": "Geschlossene Ränge, Horde, Nichts wie weg!, Kriegerschar, Hauptregiment",
-            "name_es": "Formación Cerrada, Horda, ¡Sálvese quien pueda!, Partida de Guerra, Unidad Regimental",
-            "name_fr": "Ordre Serré, Horde, Sauve qui Peut!, Bande de Guerre, Unité Régimentaire",
-            "name_it": "Close Order, Horde, Scurry Away, Warband, Regimental Unit",
-            "name_pl": "Close Order, Horde, Scurry Away, Warband, Regimental Unit"
-          }
         }
       },
       "command": [
@@ -1455,24 +1815,7 @@
           "name_de": "Standartenträger",
           "name_es": "Standard bearer",
           "name_fr": "Porte-étendard",
-          "points": 5,
-          "armyComposition": "skaven"
-        },
-        {
-          "name_en": "Standard bearer",
-          "name_cn": "旗手",
-          "name_de": "Standartenträger",
-          "name_es": "Standard bearer",
-          "name_fr": "Porte-étendard",
-          "points": 5,
-          "magic": {
-            "types": ["banner"],
-            "maxPoints": 50
-          },
-          "notes": {
-            "name_en": "0-1 unit per 1,000 points may purchase a magic standard"
-          },
-          "armyComposition": "sk-renegade"
+          "points": 5
         },
         {
           "name_en": "Musician",
@@ -1541,7 +1884,115 @@
       }
     },
     {
-      "name_en": "Weapon Team {renegade}",
+      "name_en": "Clanrats {renegade}",
+      "name_cn": "氏族鼠",
+      "name_de": "Klanratten",
+      "name_es": "Clanrats",
+      "name_fr": "Guerriers des clans",
+      "id": "clanrats-renegade",
+      "armyComposition": {
+        "sk-renegade": {
+          "category": "core"
+        }
+      },
+      "points": 4,
+      "minimum": 20,
+      "maximum": 0,
+      "regimentalUnit": true,
+      "maxDetachments": 1,
+      "allowedDetachments": ["weapon-team-renegade"],
+      "command": [
+        {
+          "name_en": "Clawleader (champion)",
+          "name_cn": "利爪队长(冠军)",
+          "name_de": "Klauenführer",
+          "name_es": "Clawleader (champion)",
+          "name_fr": "Grandes-griffes (champion)",
+          "points": 7
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_de": "Standartenträger",
+          "name_es": "Standard bearer",
+          "name_fr": "Porte-étendard",
+          "points": 5,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 50
+          },
+          "notes": {
+            "name_en": "0-1 unit per 1,000 points may purchase a magic standard"
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_de": "Musiker",
+          "name_es": "Musician",
+          "name_fr": "Musicien",
+          "points": 5
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_cn": "单手武器",
+          "name_de": "Handwaffe",
+          "name_es": "Hand weapon",
+          "name_fr": "Arme de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapon, Thrusting spear",
+          "name_cn": "单手武器, 刺矛",
+          "name_de": "Handwaffe, Stoßspeer",
+          "name_es": "Hand weapon, Thrusting spear",
+          "name_fr": "Arme de base, Lance d’infanterie",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Leichte Rüstung",
+          "name_es": "Light armour",
+          "name_fr": "Armure légère",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_cn": "盾牌",
+          "name_de": "Schild",
+          "name_es": "Shield",
+          "name_fr": "Bouclier",
+          "points": 1,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Close Order, Horde, Scurry Away, Warband, Regimental Unit",
+        "name_cn": "Close Order, Horde, Scurry Away, Warband, Regimental Unit",
+        "name_de": "Close Order, Horde, Scurry Away, Warband, Regimental Unit",
+        "name_es": "Close Order, Horde, Scurry Away, Warband, Regimental Unit",
+        "name_fr": "Close Order, Horde, Scurry Away, Warband, Regimental Unit"
+      }
+    },
+    {
+      "name_en": "Weapon Team",
       "name_cn": "武器小组",
       "name_de": "Waffenteam",
       "name_es": "Weapon Team",
@@ -1560,18 +2011,6 @@
             "name_de": "Loner, Open Order, Scurry Away, Deploying Weapon Teams, Weapon Team Leadership, Targeting Weapon Teams",
             "name_es": "Loner, Open Order, Scurry Away, Deploying Weapon Teams, Weapon Team Leadership, Targeting Weapon Teams",
             "name_fr": "Solitaire, Ordre Dispersé, Sauve qui Peut!, Deploying Weapon Teams, Weapon Team Leadership, Targeting Weapon Teams"
-          }
-        },
-        "sk-renegade": {
-          "category": "core",
-          "specialRules": {
-            "name_en": "Loner, Skirmishers, Scurry Away, Detachment",
-            "name_cn": "独行, Skirmishers, 抱头鼠窜, 分遣队",
-            "name_de": "Einzelgänger, Plänkler, Nichts wie weg!, Abteilung",
-            "name_es": "Solitario, Hostigadores, ¡Sálvese quien pueda!, Destacamento",
-            "name_fr": "Solitaire, Skirmishers, Sauve qui Peut!, Détachement",
-            "name_it": "Loner, Skirmishers, Scurry Away, Detachment",
-            "name_pl": "Loner, Skirmishers, Scurry Away, Detachment"
           }
         }
       },
@@ -1612,18 +2051,7 @@
           "name_es": "Hand weapons, Warpfire Thrower",
           "name_fr": "Armes de base, Lance-Feu",
           "points": 60,
-          "perModel": true,
-          "armyComposition": "skaven"
-        },
-        {
-          "name_en": "Hand weapons, Warpfire Thrower",
-          "name_cn": "单手武器, 次元喷火器",
-          "name_de": "Handwaffen, Warpflammenwerfer",
-          "name_es": "Hand weapons, Warpfire Thrower",
-          "name_fr": "Armes de base, Lance-Feu",
-          "points": 40,
-          "perModel": true,
-          "armyComposition": "sk-renegade"
+          "perModel": true
         },
         {
           "name_en": "Hand weapons, Warp Grinder",
@@ -1665,35 +2093,105 @@
       "name_de": "Waffenteam",
       "name_es": "Weapon Team",
       "name_fr": "Équipes d’armes",
-      "id": "weapon-team-detachment-renegade",
+      "id": "weapon-team-renegade",
+      "armyComposition": {
+        "sk-renegade": {
+          "category": "core"
+        }
+      },
       "points": 15,
       "detachment": true,
       "minDetachmentSize": 1,
       "maxDetachmentSize": 1,
-      "armyComposition": {
-        "skaven": {
-          "category": "core",
-          "specialRules": {
-            "name_en": "Loner, Open Order, Scurry Away, Deploying Weapon Teams, Weapon Team Leadership, Targeting Weapon Teams",
-            "name_cn": "独行, 开放阵型, 抱头鼠窜, Deploying Weapon Teams, Weapon Team Leadership, Targeting Weapon Teams",
-            "name_de": "Loner, Open Order, Scurry Away, Deploying Weapon Teams, Weapon Team Leadership, Targeting Weapon Teams",
-            "name_es": "Loner, Open Order, Scurry Away, Deploying Weapon Teams, Weapon Team Leadership, Targeting Weapon Teams",
-            "name_fr": "Solitaire, Ordre Dispersé, Sauve qui Peut!, Deploying Weapon Teams, Weapon Team Leadership, Targeting Weapon Teams"
-          }
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Doom-flayer {renegade}",
+          "name_cn": "单手武器, 毁灭剥皮机",
+          "name_de": "Handwaffen, Ding-schredder",
+          "name_es": "Hand weapons, Doom-flayer",
+          "name_fr": "Armes de base, Ratasphère",
+          "points": 40,
+          "perModel": true,
+          "active": true
         },
+        {
+          "name_en": "Hand weapons, Poisoned Wind Mortar {renegade}",
+          "name_cn": "单手武器, 毒风迫击炮",
+          "name_de": "Handwaffen, Giftwindmörser",
+          "name_es": "Hand weapons, Poisoned Wind Mortar",
+          "name_fr": "Armes de base, Mortier à Globes Toxiques",
+          "points": 55,
+          "perModel": true
+        },
+        {
+          "name_en": "Hand weapons, Ratling Gun {renegade}",
+          "name_cn": "单手武器, 鼠特林机枪",
+          "name_de": "Handwaffen,  Ratlingkanone",
+          "name_es": "Hand weapons, Ratling Gun",
+          "name_fr": "Armes de base, Mitrailleuse Ratling",
+          "points": 50,
+          "perModel": true
+        },
+        {
+          "name_en": "Hand weapons, Warpfire Thrower {renegade}",
+          "name_cn": "单手武器, 次元喷火器",
+          "name_de": "Handwaffen, Warpflammenwerfer",
+          "name_es": "Hand weapons, Warpfire Thrower",
+          "name_fr": "Armes de base, Lance-Feu",
+          "points": 40,
+          "perModel": true
+        },
+        {
+          "name_en": "Hand weapons, Warp Grinder",
+          "name_cn": "单手武器, 次元粉碎机",
+          "name_de": "Handwaffen, Warpbohrer",
+          "name_es": "Hand weapons, Warp Grinder",
+          "name_fr": "Armes de base, Foreuse à Malepierre",
+          "points": 30,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Leichte Rüstung",
+          "name_es": "Light armour",
+          "name_fr": "Armure légère",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Loner, Skirmishers, Scurry Away, Detachment",
+        "name_cn": "Loner, Skirmishers, Scurry Away, Detachment",
+        "name_de": "Loner, Skirmishers, Scurry Away, Detachment",
+        "name_es": "Loner, Skirmishers, Scurry Away, Detachment",
+        "name_fr": "Loner, Skirmishers, Scurry Away, Detachment"
+      }
+    },
+    {
+      "name_en": "Weapon Team {renegade}",
+      "name_cn": "武器小组",
+      "name_de": "Waffenteam",
+      "name_es": "Weapon Team",
+      "name_fr": "Équipes d’armes",
+      "id": "weapon-team-detachment-renegade",
+      "armyComposition": {
         "sk-renegade": {
-          "category": "core",
-          "specialRules": {
-            "name_en": "Loner, Skirmishers, Scurry Away, Detachment",
-            "name_cn": "独行, Skirmishers, 抱头鼠窜, 分遣队",
-            "name_de": "Einzelgänger, Plänkler, Nichts wie weg!, Abteilung",
-            "name_es": "Solitario, Hostigadores, ¡Sálvese quien pueda!, Destacamento",
-            "name_fr": "Solitaire, Skirmishers, Sauve qui Peut!, Détachement",
-            "name_it": "Loner, Skirmishers, Scurry Away, Detachment",
-            "name_pl": "Loner, Skirmishers, Scurry Away, Detachment"
-          }
+          "category": "core"
         }
       },
+      "points": 15,
+      "detachment": true,
+      "minDetachmentSize": 1,
+      "maxDetachmentSize": 1,
       "command": [],
       "equipment": [
         {
@@ -1724,11 +2222,13 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Loner, Open Order, Scurry Away",
-        "name_cn": "独行, 开放阵型, 抱头鼠窜",
-        "name_de": "Einzelgänger, Offene Ränge, Nichts wie weg!",
-        "name_es": "Solitario, Formación Abierta, ¡Sálvese quien pueda!",
-        "name_fr": "Solitaire, Ordre Dispersé, Sauve qui Peut!"
+        "name_en": "Loner, Skirmishers, Scurry Away, Detachment",
+        "name_cn": "独行, Skirmishers, 抱头鼠窜, 分遣队",
+        "name_de": "Einzelgänger, Plänkler, Nichts wie weg!, Abteilung",
+        "name_es": "Solitario, Hostigadores, ¡Sálvese quien pueda!, Destacamento",
+        "name_fr": "Solitaire, Skirmishers, Sauve qui Peut!, Détachement",
+        "name_it": "Loner, Skirmishers, Scurry Away, Detachment",
+        "name_pl": "Loner, Skirmishers, Scurry Away, Detachment"
       },
       "notes": {
         "name_en": "0-1 unit per 1000 points may take a single Weapon Team equipped with a Warpgrinder as a detachment"
@@ -1741,6 +2241,59 @@
       "name_es": "Rat Swarms",
       "name_fr": "Nuées de rats",
       "id": "rat-swarms",
+      "armyComposition": {
+        "skaven": {
+          "category": "core"
+        }
+      },
+      "points": 36,
+      "minimum": 3,
+      "maximum": 0,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons (Claws and fangs)",
+          "name_cn": "单手武器(尖牙利爪)",
+          "name_de": "Hand weapons (Claws and fangs)",
+          "name_es": "Hand weapons (Claws and fangs)",
+          "name_fr": "Armes de base (Griffes et crocs)",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Immune to Psychology, Loner, Skirmishers, Unbreakable, Vanguard",
+        "name_cn": "心理免疫, 独行, 散兵, 永不战败, 先锋",
+        "name_de": "Immun gegen Psychologie, Einzelgänger, Plänkler, Unerschütterlich, Vorhut",
+        "name_es": "Inmune a la Psicología, Solitario, Hostigadores, Indesmoralizable, Vanguardia",
+        "name_fr": "Immunisé à la Psychologie, Solitaire, Tirailleurs, Indémoralisable, Avant-garde"
+      },
+      "notes": {
+        "name_en": "",
+        "name_cn": "",
+        "name_de": "",
+        "name_es": "",
+        "name_fr": ""
+      }
+    },
+    {
+      "name_en": "Rat Swarms {renegade}",
+      "name_cn": "鼠群",
+      "name_de": "Rattenschwarm",
+      "name_es": "Rat Swarms",
+      "name_fr": "Nuées de rats",
+      "id": "rat-swarms-renegade",
+      "armyComposition": {
+        "sk-renegade": {
+          "category": "core"
+        }
+      },
       "points": 36,
       "minimum": 3,
       "maximum": 0,
@@ -1893,14 +2446,14 @@
       "name_es": "Giant Rats",
       "name_fr": "Rats Géants",
       "id": "giant-rats-renegade",
-      "points": 3,
-      "minimum": 10,
-      "maximum": 30,
       "armyComposition": {
         "sk-renegade": {
           "category": "core"
         }
       },
+      "points": 3,
+      "minimum": 10,
+      "maximum": 30,
       "command": [
         {
           "name_en": "Master Moulder (champion)",
@@ -1981,11 +2534,11 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Fight in Extra Rank, Horde, Scurry Away, Warband, Verminous Valour (Master Moulder Only)",
-        "name_cn": "紧密阵型, 额外排面攻击, 部群, 抱头鼠窜, 战帮, Verminous Valour (Master Moulder Only)",
-        "name_de": "Geschlossene Ränge, Kampf in zusätzlichem Glied, Horde, Nichts wie weg!, Kriegerschar, Rattenhafter Wagemut (nur Meisterzüchter)",
-        "name_es": "Formación Cerrada, Combatir en Fila Adicional, Horda, ¡Sálvese quien pueda!, Partida de Guerra, Valor Verminoso (solo Master Moulder)",
-        "name_fr": "Ordre Serré, Combat Sur Plusieurs Rangs, Horde, Sauve qui Peut!, Bande de Guerre, Verminous Valour (Master Moulder Only)"
+        "name_en": "Open Order, Fight in Extra Rank, Horde, Scurry Away, Warband, Motley Crew, Leader of the Pack {renegade}, Verminous Valour {renegade} (Master Moulder only)",
+        "name_cn": "Open Order, Fight in Extra Rank, Horde, Scurry Away, Warband, Motley Crew, Leader of the Pack, Verminous Valour (Master Moulder only)",
+        "name_de": "Open Order, Fight in Extra Rank, Horde, Scurry Away, Warband, Motley Crew, Leader of the Pack, Verminous Valour (Master Moulder only)",
+        "name_es": "Open Order, Fight in Extra Rank, Horde, Scurry Away, Warband, Motley Crew, Leader of the Pack, Verminous Valour (Master Moulder only)",
+        "name_fr": "Open Order, Fight in Extra Rank, Horde, Scurry Away, Warband, Motley Crew, Leader of the Pack, Verminous Valour (Master Moulder only)"
       },
       "notes": {
         "name_en": "",
@@ -2104,17 +2657,17 @@
       "name_es": "Night Runners",
       "name_fr": "Coureurs Nocturnes",
       "id": "night-runners-renegade",
+      "armyComposition": {
+        "sk-renegade": {
+          "category": "core"
+        }
+      },
       "points": 7,
       "minimum": 10,
       "maximum": 0,
       "regimentalUnit": true,
       "maxDetachments": 1,
       "allowedDetachments": ["weapon-team-detachment-renegade"],
-      "armyComposition": {
-        "sk-renegade": {
-          "category": "core"
-        }
-      },
       "command": [
         {
           "name_en": "Nightleader (champion)",
@@ -2127,7 +2680,7 @@
       ],
       "equipment": [
         {
-          "name_en": "Additional hand weapons",
+          "name_en": "Two hand weapons",
           "name_cn": "额外单手武器",
           "name_de": "Zusätzliche Handwaffen",
           "name_es": "Additional hand weapons",
@@ -2137,7 +2690,7 @@
           "active": true
         },
         {
-          "name_en": "Additional hand weapons, Slings",
+          "name_en": "Two hand weapons, Slings",
           "name_cn": "额外单手武器, 投石索",
           "name_de": "Zusätzliche Handwaffen, Schleudern",
           "name_es": "Additional hand weapons, Slings",
@@ -2146,7 +2699,7 @@
           "perModel": true
         },
         {
-          "name_en": "Additional hand weapons, Throwing weapons",
+          "name_en": "Two hand weapons, Throwing weapons",
           "name_cn": "额外单手武器, 投掷武器",
           "name_de": "Zusätzliche Handwaffen, Wurfwaffen",
           "name_es": "Additional hand weapons, Throwing weapons",
@@ -2162,10 +2715,10 @@
       "lores": [],
       "specialRules": {
         "name_en": "Evasive, Fire & Flee, Scurry Away, Skirmishers, Vanguard, Regimental Unit",
-        "name_cn": "闪避, 游击, 抱头鼠窜, 散兵, Vanguard, Regimental Unit",
-        "name_de": "Ausweichen, Schießen und Verschwinden, Nichts wie weg!, Plänkler, Vorhut, Hauptregiment",
-        "name_es": "Evasivo, Disparar y Huir, ¡Sálvese quien pueda!, Hostigadores, Vanguardia, Unidad Regimental",
-        "name_fr": "Esquiveur, Tir & Fuite, Sauve qui Peut!, Tirailleurs, Vanguard, Regimental Unit"
+        "name_cn": "Evasive, Fire & Flee, Scurry Away, Skirmishers, Vanguard, Regimental Unit",
+        "name_de": "Evasive, Fire & Flee, Scurry Away, Skirmishers, Vanguard, Regimental Unit",
+        "name_es": "Evasive, Fire & Flee, Scurry Away, Skirmishers, Vanguard, Regimental Unit",
+        "name_fr": "Evasive, Fire & Flee, Scurry Away, Skirmishers, Vanguard, Regimental Unit"
       },
       "notes": {
         "name_en": "0-1 unit per 1000 points may take a single Weapon Team equipped with a Warpgrinder as a detachment",
@@ -2184,26 +2737,17 @@
       "name_es": "Plague Monks",
       "name_fr": "Moines de la Peste",
       "id": "plague-monks-core-renegade",
+      "armyComposition": {
+        "sk-renegade": {
+          "category": "core"
+        }
+      },
       "points": 7,
       "minimum": 10,
       "maximum": 0,
       "regimentalUnit": true,
       "maxDetachments": 1,
       "allowedDetachments": ["plague-censer-bearers-detachment-renegade"],
-      "armyComposition": {
-        "sk-renegade": {
-          "category": "core",
-          "notes": {
-            "name_en": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of Plague Monks if army includes a Plague Priest",
-            "name_cn": "如果你的军队包含1个斯卡文军阀，则0-1单位的风暴鼠或者如果你的军队包含1个瘟疫祭司，则0-1单位的瘟疫僧",
-            "name_de": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of Plague Monks if army includes a Plague Priest",
-            "name_es": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of Plague Monks if army includes a Plague Priest",
-            "name_fr": "0-1 unité de Vermines de choc si votre armée inclut un Seigneur de Guerre OU 0-1 unité de Moines de la Peste si votre armée inclut un Prêtre de la Peste",
-            "name_it": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of Plague Monks if army includes a Plague Priest",
-            "name_pl": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of Plague Monks if army includes a Plague Priest"
-          }
-        }
-      },
       "command": [
         {
           "name_en": "Plague Deacon",
@@ -2278,6 +2822,15 @@
         "name_de": "Geschlossene Ränge, Raserei, Horde, Nichts wie weg!, Kriegerschar, Hauptregiment",
         "name_es": "Formación Cerrada, Furia asesina, Horda, ¡Sálvese quien pueda!, Partida de Guerra, Unidad Regimental",
         "name_fr": "Ordre Serré, Frénésie, Horde, Sauve qui Peut!, Bande de Guerre, Regimental Unit"
+      },
+      "notes": {
+        "name_en": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of Plague Monks if army includes a Plague Priest",
+        "name_cn": "如果你的军队包含1个斯卡文军阀，则0-1单位的风暴鼠或者如果你的军队包含1个瘟疫祭司，则0-1单位的瘟疫僧",
+        "name_de": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of Plague Monks if army includes a Plague Priest",
+        "name_es": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of Plague Monks if army includes a Plague Priest",
+        "name_fr": "0-1 unité de Vermines de choc si votre armée inclut un Seigneur de Guerre OU 0-1 unité de Moines de la Peste si votre armée inclut un Prêtre de la Peste",
+        "name_it": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of Plague Monks if army includes a Plague Priest",
+        "name_pl": "0-1 unit of Stormvermin if army includes a Skaven Warlord OR 0-1 unit of Plague Monks if army includes a Plague Priest"
       }
     }
   ],
@@ -2288,27 +2841,18 @@
       "name_de": "Sturmratten",
       "name_es": "Stormvermin",
       "name_fr": "Vermines de choc",
-      "id": "stormvermin",
+      "id": "stormvermin-renegade",
+      "armyComposition": {
+        "sk-renegade": {
+          "category": "special"
+        }
+      },
       "points": 9,
       "minimum": 10,
       "maximum": 0,
       "regimentalUnit": true,
       "maxDetachments": 1,
-      "allowedDetachments": ["weapon-team"],
-      "armyComposition": {
-        "sk-renegade": {
-          "category": "special",
-          "specialRules": {
-            "name_en": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit",
-            "name_cn": "紧密阵型, 部群, 抱头鼠窜, 战帮, 次元石武器, 主团单位",
-            "name_de": "Geschlossene Ränge, Horde, Nichts wie weg!, Kriegerschar, Warpsteinwaffen, Hauptregiment",
-            "name_es": "Formación Cerrada, Horda, ¡Sálvese quien pueda!, Partida de Guerra, Armas de piedra bruja, Unidad Regimental",
-            "name_fr": "Ordre Serré, Horde, Sauve qui Peut!, Bande de Guerre, Armes à base de Malepierre, Unité Régimentaire",
-            "name_it": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit",
-            "name_pl": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit"
-          }
-        }
-      },
+      "allowedDetachments": ["weapon-team-renegade"],
       "command": [
         {
           "name_en": "Fangleader (champion)",
@@ -2391,11 +2935,13 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons",
-        "name_cn": "紧密阵型, 部群, 抱头鼠窜, 战帮, 次元石武器",
-        "name_de": "Geschlossene Ränge, Horde, Nichts wie weg!, Kriegerschar, Warpsteinwaffen",
-        "name_es": "Formación Cerrada, Horda, ¡Sálvese quien pueda!, Partida de Guerra, Armas de piedra bruja",
-        "name_fr": "Ordre Serré, Horde, Sauve qui Peut!, Bande de Guerre, Armes à base de Malepierre"
+        "name_en": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit",
+        "name_cn": "紧密阵型, 部群, 抱头鼠窜, 战帮, 次元石武器, 主团单位",
+        "name_de": "Geschlossene Ränge, Horde, Nichts wie weg!, Kriegerschar, Warpsteinwaffen, Hauptregiment",
+        "name_es": "Formación Cerrada, Horda, ¡Sálvese quien pueda!, Partida de Guerra, Armas de piedra bruja, Unidad Regimental",
+        "name_fr": "Ordre Serré, Horde, Sauve qui Peut!, Bande de Guerre, Armes à base de Malepierre, Unité Régimentaire",
+        "name_it": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit",
+        "name_pl": "Close Order, Horde, Scurry Away, Warband, Warpstone Weapons, Regimental Unit"
       }
     },
     {
@@ -2507,14 +3053,14 @@
       "name_es": "Gutter Runners",
       "name_fr": "Coureurs d’Égouts",
       "id": "gutter-runners-renegade",
-      "points": 14,
-      "minimum": 5,
-      "maximum": 0,
       "armyComposition": {
         "sk-renegade": {
           "category": "special"
         }
       },
+      "points": 14,
+      "minimum": 5,
+      "maximum": 0,
       "command": [
         {
           "name_en": "Assassin",
@@ -2578,10 +3124,10 @@
       "lores": [],
       "specialRules": {
         "name_en": "Evasive, Feigned Flight, Fire & Flee, Move Through Cover, Scouts, Scurry Away, Skirmishers, Poisoned Attacks",
-        "name_cn": "闪避, 诱敌诈退, 游击, 穿行掩体, 侦察, 抱头鼠窜, 散兵, Poisoned Attacks",
-        "name_de": "Ausweichen, Vorgetäuschte Flucht, Schießen und Verschwinden, Durch Deckung bewegen, Kundschafter, Nichts wie weg!, Plänkler, Giftattacken",
-        "name_es": "Evasivo, Huida Simulada, Disparar y Huir, Mover a Través de Cobertura, Exploradores, ¡Sálvese quien pueda!, Hostigadores, Ataques envenenados",
-        "name_fr": "Esquiveur, Fuite Feinte, Tir & Fuite, Mouvement à Couvert, Éclaireurs, Sauve qui Peut!, Tirailleurs, Poisoned Attacks"
+        "name_cn": "Evasive, Feigned Flight, Fire & Flee, Move Through Cover, Scouts, Scurry Away, Skirmishers, Poisoned Attacks",
+        "name_de": "Evasive, Feigned Flight, Fire & Flee, Move Through Cover, Scouts, Scurry Away, Skirmishers, Poisoned Attacks",
+        "name_es": "Evasive, Feigned Flight, Fire & Flee, Move Through Cover, Scouts, Scurry Away, Skirmishers, Poisoned Attacks",
+        "name_fr": "Evasive, Feigned Flight, Fire & Flee, Move Through Cover, Scouts, Scurry Away, Skirmishers, Poisoned Attacks"
       },
       "notes": {
         "name_en": "",
@@ -2720,14 +3266,14 @@
       "name_es": "Rat Ogres",
       "name_fr": "Rat-ogres",
       "id": "rat-ogres-renegade",
-      "points": 40,
-      "minimum": 3,
-      "maximum": 0,
       "armyComposition": {
         "sk-renegade": {
           "category": "special"
         }
       },
+      "points": 40,
+      "minimum": 3,
+      "maximum": 0,
       "command": [
         {
           "name_en": "Master Moulder (champion)",
@@ -2819,11 +3365,11 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Armour Bane (2), Close Order, Fear, Frenzy, Horde, Safe from Harm, Scurry Away, Warband, Scurrying Masses, Warpstone Weapons, Motley Crew",
-        "name_cn": "碎甲攻击(2), 紧密阵型, 恐惧, 狂暴, 部群, 保其周全, 抱头鼠窜, 战帮, Scurrying Masses, Warpstone Weapons, Motley Crew",
-        "name_de": "Rüstungsfluch (2), Geschlossene Ränge, Angst, Raserei, Horde, Vor Schaden bewahrt, Nichts wie weg!, Kriegerschar, Wuselnde Massen, Warpsteinwaffen, Zusammengewürfelter Haufen",
-        "name_es": "Perforacorazas (2), Formación Cerrada, Miedo, Furia asesina, Horda, A Salvo de Daño, ¡Sálvese quien pueda!, Partida de Guerra, Masas Bullentes, Armas de piedra bruja, Armamento Variado",
-        "name_fr": "Arme Perforante (2), Ordre Serré, Peur, Frénésie, Horde, À l’Abri du Danger, Sauve qui Peut!, Bande de Guerre, Scurrying Masses, Warpstone Weapons, Motley Crew"
+        "name_en": "Close Order, Armour Bane (2), Fear, Frenzy, Horde, Scurry Away, Warband, Scurrying Masses {renegade}, Warpstone Weapons, Motley Crew, Leader of the Pack {renegade}, Verminous Valour {renegade} (Master Moulder only)",
+        "name_cn": "Close Order, Armour Bane (2), Fear, Frenzy, Horde, Scurry Away, Warband, Scurrying Masses, Warpstone Weapons, Motley Crew, Leader of the Pack, Verminous Valour (Master Moulder only)",
+        "name_de": "Close Order, Armour Bane (2), Fear, Frenzy, Horde, Scurry Away, Warband, Scurrying Masses, Warpstone Weapons, Motley Crew, Leader of the Pack, Verminous Valour (Master Moulder only)",
+        "name_es": "Close Order, Armour Bane (2), Fear, Frenzy, Horde, Scurry Away, Warband, Scurrying Masses, Warpstone Weapons, Motley Crew, Leader of the Pack, Verminous Valour (Master Moulder only)",
+        "name_fr": "Close Order, Armour Bane (2), Fear, Frenzy, Horde, Scurry Away, Warband, Scurrying Masses, Warpstone Weapons, Motley Crew, Leader of the Pack, Verminous Valour (Master Moulder only)"
       }
     },
     {
@@ -2933,17 +3479,17 @@
       "name_es": "Plague Monks",
       "name_fr": "Moines de la Peste",
       "id": "plague-monks-renegade",
+      "armyComposition": {
+        "sk-renegade": {
+          "category": "special"
+        }
+      },
       "points": 7,
       "minimum": 10,
       "maximum": 0,
       "regimentalUnit": true,
       "maxDetachments": 1,
       "allowedDetachments": ["plague-censer-bearers-detachment-renegade"],
-      "armyComposition": {
-        "sk-renegade": {
-          "category": "special"
-        }
-      },
       "command": [
         {
           "name_en": "Plague Deacon",
@@ -3014,10 +3560,10 @@
       "lores": [],
       "specialRules": {
         "name_en": "Close Order, Frenzy, Horde, Scurry Away, Warband, Regimental Unit",
-        "name_cn": "紧密阵型, 狂暴, 部群, 抱头鼠窜, 战帮, Regimental Unit",
-        "name_de": "Geschlossene Ränge, Raserei, Horde, Nichts wie weg!, Kriegerschar, Hauptregiment",
-        "name_es": "Formación Cerrada, Furia asesina, Horda, ¡Sálvese quien pueda!, Partida de Guerra, Unidad Regimental",
-        "name_fr": "Ordre Serré, Frénésie, Horde, Sauve qui Peut!, Bande de Guerre, Regimental Unit"
+        "name_cn": "Close Order, Frenzy, Horde, Scurry Away, Warband, Regimental Unit",
+        "name_de": "Close Order, Frenzy, Horde, Scurry Away, Warband, Regimental Unit",
+        "name_es": "Close Order, Frenzy, Horde, Scurry Away, Warband, Regimental Unit",
+        "name_fr": "Close Order, Frenzy, Horde, Scurry Away, Warband, Regimental Unit"
       }
     },
     {
@@ -3088,23 +3634,14 @@
       "name_es": "Warplock Jezzails",
       "name_fr": "Jezzails",
       "id": "warplock-jezzails-renegade",
+      "armyComposition": {
+        "sk-renegade": {
+          "category": "special"
+        }
+      },
       "points": 15,
       "minimum": 3,
       "maximum": 0,
-      "armyComposition": {
-        "sk-renegade": {
-          "category": "special",
-          "notes": {
-            "name_en": "If your army includes a Clan Skryre Warlock Engineer",
-            "name_cn": "若你的军队中包含1个史库里氏族工程术士",
-            "name_de": "If your army includes a Clan Skryre Warlock Engineer",
-            "name_es": "If your army includes a Clan Skryre Warlock Engineer",
-            "name_fr": "Si votre armée inclut un Technomage du Clan Skryre",
-            "name_it": "If your army includes a Clan Skryre Warlock Engineer",
-            "name_pl": "If your army includes a Clan Skryre Warlock Engineer"
-          }
-        }
-      },
       "command": [],
       "equipment": [
         {
@@ -3155,10 +3692,19 @@
         "name_de": "Offene Ränge, Nichts wie weg!, Kriegerschar",
         "name_es": "Formación Abierta, ¡Sálvese quien pueda!, Partida de Guerra",
         "name_fr": "Ordre Dispersé, Sauve qui Peut!, Bande de Guerre"
+      },
+      "notes": {
+        "name_en": "If your army includes a Clan Skryre Warlock Engineer",
+        "name_cn": "若你的军队中包含1个史库里氏族工程术士",
+        "name_de": "If your army includes a Clan Skryre Warlock Engineer",
+        "name_es": "If your army includes a Clan Skryre Warlock Engineer",
+        "name_fr": "Si votre armée inclut un Technomage du Clan Skryre",
+        "name_it": "If your army includes a Clan Skryre Warlock Engineer",
+        "name_pl": "If your army includes a Clan Skryre Warlock Engineer"
       }
     },
     {
-      "name_en": "Poisoned Wind Globadiers {renegade}",
+      "name_en": "Poisoned Wind Globadiers",
       "name_cn": "毒风掷弹手",
       "name_de": "Giftwindkrieger",
       "name_es": "Poisoned Wind Globadiers",
@@ -3178,25 +3724,6 @@
             "name_fr": "0-1 unité de Globadiers par Technomage du Clan Skryre pris",
             "name_it": "0-1 unit of Poisoned Wind Globadiers per Clan Skryre Warlock Engineer taken",
             "name_pl": "0-1 unit of Poisoned Wind Globadiers per Clan Skryre Warlock Engineer taken"
-          }
-        },
-        "sk-renegade": {
-          "category": "special",
-          "notes": {
-            "name_en": "If your army includes a Clan Skryre Warlock Engineer. Poisoned Wind Globadiers 0-1 per 1,000 points",
-            "name_cn": "若你的军队中包含1个史库里氏族工程术士. Poisoned Wind Globadiers 0-1 per 1,000 points",
-            "name_de": "If your army includes a Clan Skryre Warlock Engineer. Poisoned Wind Globadiers 0-1 per 1,000 points",
-            "name_es": "If your army includes a Clan Skryre Warlock Engineer. Poisoned Wind Globadiers 0-1 per 1,000 points",
-            "name_fr": "Si votre armée inclut un Technomage du Clan Skryre. Poisoned Wind Globadiers 0-1 per 1,000 points",
-            "name_it": "If your army includes a Clan Skryre Warlock Engineer. Poisoned Wind Globadiers 0-1 per 1,000 points",
-            "name_pl": "If your army includes a Clan Skryre Warlock Engineer. Poisoned Wind Globadiers 0-1 per 1,000 points"
-          },
-          "specialRules": {
-            "name_en": "Scurry Away, Skirmishers, Warband, Life is Cheap",
-            "name_cn": "抱头鼠窜, 散兵, 战帮, Life is Cheap",
-            "name_de": "Nichts wie weg!, Plänkler, Kriegerschar, Leben ist billig",
-            "name_es": "¡Sálvese quien pueda!, Hostigadores, Partida de Guerra, La Vida es Barata",
-            "name_fr": "Sauve qui Peut!, Tirailleurs, Bande de Guerre, Life is Cheap"
           }
         }
       },
@@ -3236,11 +3763,72 @@
         "name_es": "¡Sálvese quien pueda!, Hostigadores, Partida de Guerra",
         "name_fr": "Sauve qui Peut!, Tirailleurs, Bande de Guerre"
       }
+    },
+    {
+      "name_en": "Poisoned Wind Globadiers {renegade}",
+      "name_cn": "毒风掷弹手",
+      "name_de": "Giftwindkrieger",
+      "name_es": "Poisoned Wind Globadiers",
+      "name_fr": "Globadiers",
+      "id": "poisoned-wind-globadiers-renegade",
+      "armyComposition": {
+        "sk-renegade": {
+          "category": "special"
+        }
+      },
+      "points": 10,
+      "minimum": 2,
+      "maximum": 10,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Poisoned Wind globes {renegade}",
+          "name_cn": "单手武器, 毒风球",
+          "name_de": "Handwaffe, Giftwindkugeln",
+          "name_es": "Hand weapons, Poisoned Wind globes",
+          "name_fr": "Armes de base, Globes de Vent Empoisonné",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Leichte Rüstung",
+          "name_es": "Light armour",
+          "name_fr": "Armure légère",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Scurry Away, Skirmishers, Warband, Life is Cheap {renegade}",
+        "name_cn": "Scurry Away, Skirmishers, Warband, Life is Cheap",
+        "name_de": "Scurry Away, Skirmishers, Warband, Life is Cheap",
+        "name_es": "Scurry Away, Skirmishers, Warband, Life is Cheap",
+        "name_fr": "Scurry Away, Skirmishers, Warband, Life is Cheap"
+      },
+      "notes": {
+        "name_en": "If your army includes a Clan Skryre Warlock Engineer. Poisoned Wind Globadiers 0-1 per 1,000 points",
+        "name_cn": "若你的军队中包含1个史库里氏族工程术士. Poisoned Wind Globadiers 0-1 per 1,000 points",
+        "name_de": "If your army includes a Clan Skryre Warlock Engineer. Poisoned Wind Globadiers 0-1 per 1,000 points",
+        "name_es": "If your army includes a Clan Skryre Warlock Engineer. Poisoned Wind Globadiers 0-1 per 1,000 points",
+        "name_fr": "Si votre armée inclut un Technomage du Clan Skryre. Poisoned Wind Globadiers 0-1 per 1,000 points",
+        "name_it": "If your army includes a Clan Skryre Warlock Engineer. Poisoned Wind Globadiers 0-1 per 1,000 points",
+        "name_pl": "If your army includes a Clan Skryre Warlock Engineer. Poisoned Wind Globadiers 0-1 per 1,000 points"
+      }
     }
   ],
   "rare": [
     {
-      "name_en": "Hell Pit Abomination {renegade}",
+      "name_en": "Hell Pit Abomination",
       "name_cn": "地狱深坑憎恶",
       "name_de": "Höllengrubenbrut",
       "name_es": "Hell Pit Abomination",
@@ -3292,12 +3880,12 @@
       "name_es": "Hell Pit Abomination",
       "name_fr": "Abomination de Malefosse",
       "id": "hell-pit-abomination-renegade",
-      "points": 210,
       "armyComposition": {
         "sk-renegade": {
           "category": "rare"
         }
       },
+      "points": 210,
       "command": [],
       "equipment": [
         {
@@ -3328,13 +3916,11 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Abominable Attacks, Close Order, Immune to Psychology, Large Target, Magic Resistance (-1), Random Attacks, Random Movement, Regeneration (5+), Stomp Attacks (D3+1), Terror, Timmm-berrr!, Too Horrible to Die, Unbreakable, Impact Hits (D3+1), Warpstone Spikes",
-        "name_cn": "憎恶攻击, 紧密阵型, 心理免疫, 大型目标, 魔法抗性(-1), 随机攻击, 随机移动, 重生(5+), 践踏攻击(D3+1), 惊骇, 倒啦！, 祸害活千年, 永不战败, 撞击(D3+1), Warpstone Spikes",
-        "name_de": "Abscheuliche Attacken, Geschlossene Ränge, Immun gegen Psychologie, Großes Ziel, Magieresistenz (-1), Zufällige Attacken, Zufällige Bewegung, Regeneration (5+), Stampfattacken (W3+1), Entsetzen, Baum fällt!, Zu schrecklich zum Sterben, Unerschütterlich, Aufpralltreffer (W3+1), Warpsteinstacheln",
-        "name_es": "Ataques Abominables, Formación Cerrada, Inmune a la Psicología, Objetivo Grande, Resistencia a la Magia (-1), Ataques Aleatorios, Movimiento Aleatorio, Regeneración (5+), Pisotones (D3+1), Terror, Árbol Vaaa!, Demasiado Horrible para Morir, Indesmoralizable, Impactos por Carga (D3+1), Púas de piedra bruja",
-        "name_fr": "Attaques Abominables, Ordre Serré, Immunisé à la Psychologie, Grande Cible, Résistance à la Magie (-1), Attaques Aléatoires, Mouvement Aléatoire, Régénération (5+), Attaques de Piétinement (D3+1), Terreur, Timmm-berrr!, Trop Horrible pour Mourir, Indémoralisable, Touches d’Impact (D3+1), Warpstone Spikes",
-        "name_it": "Abominable Attacks, Close Order, Immune to Psychology, Large Target, Magic Resistance (-1), Random Attacks, Random Movement, Regeneration (5+), Stomp Attacks (D3+1), Terror, Timmm-berrr!, Too Horrible to Die, Unbreakable, Impact Hits (D3+1), Warpstone Spikes",
-        "name_pl": "Abominable Attacks, Close Order, Immune to Psychology, Large Target, Magic Resistance (-1), Random Attacks, Random Movement, Regeneration (5+), Stomp Attacks (D3+1), Terror, Timmm-berrr!, Too Horrible to Die, Unbreakable, Impact Hits (D3+1), Warpstone Spikes"
+        "name_en": "Abominable Attacks, Close Order, Immune to Psychology, Large Target, Magic Resistance (-1), Random Attacks, Random Movement, Regeneration (5+), Stomp Attacks (D3+1), Terror, Timmm-berrr!, Too Horrible to Die, Unbreakable, Impact Hits (D3+1), Warpstone Spikes {renegade}",
+        "name_cn": "Abominable Attacks, Close Order, Immune to Psychology, Large Target, Magic Resistance (-1), Random Attacks, Random Movement, Regeneration (5+), Stomp Attacks (D3+1), Terror, Timmm-berrr!, Too Horrible to Die, Unbreakable, Impact Hits (D3+1), Warpstone Spikes",
+        "name_de": "Abominable Attacks, Close Order, Immune to Psychology, Large Target, Magic Resistance (-1), Random Attacks, Random Movement, Regeneration (5+), Stomp Attacks (D3+1), Terror, Timmm-berrr!, Too Horrible to Die, Unbreakable, Impact Hits (D3+1), Warpstone Spikes",
+        "name_es": "Abominable Attacks, Close Order, Immune to Psychology, Large Target, Magic Resistance (-1), Random Attacks, Random Movement, Regeneration (5+), Stomp Attacks (D3+1), Terror, Timmm-berrr!, Too Horrible to Die, Unbreakable, Impact Hits (D3+1), Warpstone Spikes",
+        "name_fr": "Abominable Attacks, Close Order, Immune to Psychology, Large Target, Magic Resistance (-1), Random Attacks, Random Movement, Regeneration (5+), Stomp Attacks (D3+1), Terror, Timmm-berrr!, Too Horrible to Die, Unbreakable, Impact Hits (D3+1), Warpstone Spikes"
       },
       "notes": {
         "name_en": "0-1 Hell Pit Abomination per 1000 points",
@@ -3409,16 +3995,16 @@
       "name_es": "Doomwheel",
       "name_fr": "Roue Infernale",
       "id": "doomwheel-renegade",
-      "points": 145,
       "armyComposition": {
         "sk-renegade": {
           "category": "rare"
         }
       },
+      "points": 145,
       "command": [],
       "equipment": [
         {
-          "name_en": "Hand weapons (Claws and fangs)",
+          "name_en": "Hand weapons (Claws and fangs), Warp Lightning Bolt {renegade}",
           "name_cn": "单手武器(尖牙利爪)",
           "name_de": "Hand weapons (Claws and fangs)",
           "name_es": "Hand weapons (Claws and fangs)",
@@ -3445,11 +4031,11 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Close Order, Crushing Bulk, Immune to Psychology, Impact Hits (D6+1), Large Target, Random Attacks (Rats only), Random Movement, Stomp Attacks (D3), Zzzzap!",
-        "name_cn": "紧密阵型, 碾碎敌人, 心理免疫, 撞击(D6+1), 大型目标, 随机攻击(仅限老鼠), 随机移动, 践踏攻击(D3), 吱吱啪！",
-        "name_de": "Geschlossene Ränge, Erdrückende Masse, Immun gegen Psychologie, Aufpralltreffer (W6+1), Großes Ziel, Zufällige Attacken (nur Ratten), Zufällige Bewegung, Stampfattacken (W3), Zzzzap!",
-        "name_es": "Formación Cerrada, Mole Aplastante, Inmune a la Psicología, Impactos por Carga (D6+1), Objetivo Grande, Ataques Aleatorios (solo ratas), Movimiento Aleatorio, Pisotones (D3), ¡Zzzzap!",
-        "name_fr": "Ordre Serré, Écrasement, Immunisé à la Psychologie, Touches d’Impact (D6+1), Grande Cible, Attaques Aléatoires (Rats uniquement), Mouvement Aléatoire, Attaques de Piétinement (D3), Zzzzap!"
+        "name_en": "Close Order, Crushing Bulk {renegade}, Immune to Psychology, Impact Hits (D6+1), Large Target, Random Attacks (Rats only), Random Movement, Stomp Attacks (D3), Zzzzap! {renegade}",
+        "name_cn": "Close Order, Crushing Bulk, Immune to Psychology, Impact Hits (D6+1), Large Target, Random Attacks (Rats only), Random Movement, Stomp Attacks (D3), Zzzzap!",
+        "name_de": "Close Order, Crushing Bulk, Immune to Psychology, Impact Hits (D6+1), Large Target, Random Attacks (Rats only), Random Movement, Stomp Attacks (D3), Zzzzap!",
+        "name_es": "Close Order, Crushing Bulk, Immune to Psychology, Impact Hits (D6+1), Large Target, Random Attacks (Rats only), Random Movement, Stomp Attacks (D3), Zzzzap!",
+        "name_fr": "Close Order, Crushing Bulk, Immune to Psychology, Impact Hits (D6+1), Large Target, Random Attacks (Rats only), Random Movement, Stomp Attacks (D3), Zzzzap!"
       },
       "notes": {
         "name_en": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 of each of the following may be taken per 1000 points: Doomwheel, Warp Lightning Cannon",
@@ -3462,7 +4048,7 @@
       }
     },
     {
-      "name_en": "Warp Lightning Cannon {renegade}",
+      "name_en": "Warp Lightning Cannon",
       "name_cn": "次元闪电炮",
       "name_de": "Warpblitzkanone",
       "name_es": "Warp Lightning Cannon",
@@ -3472,24 +4058,12 @@
       "armyComposition": {
         "skaven": {
           "category": "rare"
-        },
-        "sk-renegade": {
-          "category": "rare",
-          "notes": {
-            "name_en": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 of each of the following may be taken per 1000 points: Doomwheel, Warp Lightning Cannon",
-            "name_cn": "如果你的军队包含一个或更多的史库里氏族工程术士, 每1000分可以各选取0-1个: 毁灭巨轮, 次元闪电炮",
-            "name_de": "Wenn deine Armee mindestens einen Clan Skryre Warlocktechniker enthält, darf pro 1000 Punkte je 0-1 der Folgenden gewählt werden: Todesrad, Warpblitzkanone",
-            "name_es": "Si tu ejército incluye uno o más Ingenieros Brujos del Clan Skryre, puedes tomar 0-1 de cada uno de los siguientes por cada 1000 puntos: Rueda Fatídica, Cañón de Rayo Disforme",
-            "name_fr": "Si votre armée inclut un Technomage du Clan Skryre ou plus, 0-1 de chacun des suivants peuvent être pris par tranche de 1000 points : Roue Infernale, Canon à Malefoudre",
-            "name_it": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 of each of the following may be taken per 1000 points: Doomwheel, Warp Lightning Cannon",
-            "name_pl": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 of each of the following may be taken per 1000 points: Doomwheel, Warp Lightning Cannon"
-          }
         }
       },
       "command": [],
       "equipment": [
         {
-          "name_en": "Warp Lightning Cannon {renegade}, Hand weapons",
+          "name_en": "Warp Lightning Cannon, Hand weapons",
           "name_cn": "次元闪电炮, 单手武器",
           "name_de": "Warpblitzkanone, Handwaffen",
           "name_es": "Warp Lightning Cannon, Hand weapons",
@@ -3533,6 +4107,65 @@
       }
     },
     {
+      "name_en": "Warp Lightning Cannon {renegade}",
+      "name_cn": "次元闪电炮",
+      "name_de": "Warpblitzkanone",
+      "name_es": "Warp Lightning Cannon",
+      "name_fr": "Canon à Malefoudre",
+      "id": "warp-lightning-cannon-renegade",
+      "armyComposition": {
+        "sk-renegade": {
+          "category": "rare"
+        }
+      },
+      "points": 110,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Warp Lightning Cannon {renegade}, Hand weapons",
+          "name_cn": "次元闪电炮, 单手武器",
+          "name_de": "Warpblitzkanone, Handwaffen",
+          "name_es": "Warp Lightning Cannon, Hand weapons",
+          "name_fr": "Canon à Malefoudre, Armes de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Leichte Rüstung",
+          "name_es": "Light armour",
+          "name_fr": "Armure légère",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Skirmishers",
+        "name_cn": "散兵",
+        "name_de": "Plänkler",
+        "name_es": "Hostigadores",
+        "name_fr": "Tirailleurs"
+      },
+      "notes": {
+        "name_en": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 of each of the following may be taken per 1000 points: Doomwheel, Warp Lightning Cannon",
+        "name_cn": "如果你的军队包含一个或更多的史库里氏族工程术士, 每1000分可以各选取0-1个: 毁灭巨轮, 次元闪电炮",
+        "name_de": "Wenn deine Armee mindestens einen Clan Skryre Warlocktechniker enthält, darf pro 1000 Punkte je 0-1 der Folgenden gewählt werden: Todesrad, Warpblitzkanone",
+        "name_es": "Si tu ejército incluye uno o más Ingenieros Brujos del Clan Skryre, puedes tomar 0-1 de cada uno de los siguientes por cada 1000 puntos: Rueda Fatídica, Cañón de Rayo Disforme",
+        "name_fr": "Si votre armée inclut un Technomage du Clan Skryre ou plus, 0-1 de chacun des suivants peuvent être pris par tranche de 1000 points : Roue Infernale, Canon à Malefoudre",
+        "name_it": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 of each of the following may be taken per 1000 points: Doomwheel, Warp Lightning Cannon",
+        "name_pl": "If your army includes one or more Clan Skryre Warlock Engineers, 0-1 of each of the following may be taken per 1000 points: Doomwheel, Warp Lightning Cannon"
+      }
+    },
+    {
       "name_en": "Plagueclaw Catapult",
       "name_cn": "瘟疫利爪投石机",
       "name_de": "Seuchenklauen Katapult",
@@ -3543,18 +4176,6 @@
       "armyComposition": {
         "skaven": {
           "category": "rare"
-        },
-        "sk-renegade": {
-          "category": "rare",
-          "notes": {
-            "name_en": "If your army includes one or more Clan Pestilens Plague Priests, 0-1 of each of the following may be taken per 1000 points: Plagueclaw Catapult, Unit of Plague Censer Bearers",
-            "name_cn": "如果你的军队包含一个或更多的疫病氏族瘟疫祭司, 每1000分可以各选取0-1个: 瘟疫利爪投石机, 瘟疫香炉僧单位",
-            "name_de": "Wenn deine Armee mindestens einen Clan Pestilens Seuchenpriester enthält, darf pro 1000 Punkte je 0-1 der Folgenden gewählt werden: Seuchenklauen Katapult, Einheit Seuchenschleuderer",
-            "name_es": "Si tu ejército incluye uno o más Sacerdotes de la Plaga del Clan Pestilens, puedes tomar 0-1 de cada uno de los siguientes por cada 1000 puntos: Catapulta Zarpapeste, Unidad de Portaincensarios de la Plaga",
-            "name_fr": "Si votre armée inclut un Prêtre de la Peste du Clan Pestilens ou plus, 0-1 de chacun des suivants peuvent être pris par tranche de 1000 points : Catapulte de la Peste, Unité d’Encenseurs à Peste",
-            "name_it": "If your army includes one or more Clan Pestilens Plague Priests, 0-1 of each of the following may be taken per 1000 points: Plagueclaw Catapult, Unit of Plague Censer Bearers",
-            "name_pl": "If your army includes one or more Clan Pestilens Plague Priests, 0-1 of each of the following may be taken per 1000 points: Plagueclaw Catapult, Unit of Plague Censer Bearers"
-          }
         }
       },
       "command": [],
@@ -3601,6 +4222,65 @@
         "name_fr": "Si votre armée inclut un Prêtres de la Peste du Clan Pestilens ou plus, 0-1 Catapulte de la Peste ou unité de Encenseurs à Peste peuvent être pris par tranche de 1000 points",
         "name_it": "If your army includes one or more Clan Pestilens Plague Priests, 0-1 Plagueclaw Catapult or unit of Plague Censer Bearers may be taken per 1000 points",
         "name_pl": "If your army includes one or more Clan Pestilens Plague Priests, 0-1 Plagueclaw Catapult or unit of Plague Censer Bearers may be taken per 1000 points"
+      }
+    },
+    {
+      "name_en": "Plagueclaw Catapult {renegade}",
+      "name_cn": "瘟疫利爪投石机",
+      "name_de": "Seuchenklauen Katapult",
+      "name_es": "Plagueclaw Catapult",
+      "name_fr": "Catapulte de la Peste",
+      "id": "plagueclaw-catapult-renegade",
+      "armyComposition": {
+        "sk-renegade": {
+          "category": "rare"
+        }
+      },
+      "points": 110,
+      "command": [],
+      "equipment": [
+        {
+          "name_en": "Plagueclaw Catapult {renegade}, Hand weapons",
+          "name_cn": "瘟疫利爪投石机, 单手武器",
+          "name_de": "Seuchenklauen Katapult, Handwaffen",
+          "name_es": "Plagueclaw Catapult, Hand weapons",
+          "name_fr": "Catapulte de la Peste, Armes de base",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Leichte Rüstung",
+          "name_es": "Light armour",
+          "name_fr": "Armure légère",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Random Attacks, Skirmishers, Stubborn",
+        "name_cn": "随机攻击, 散兵, 坚毅",
+        "name_de": "Zufällige Attacken, Plänkler, Unnachgiebig",
+        "name_es": "Ataques Aleatorios, Hostigadores, Tozudo",
+        "name_fr": "Attaques Aléatoires, Tirailleurs, Obstiné"
+      },
+      "notes": {
+        "name_en": "If your army includes one or more Clan Pestilens Plague Priests, 0-1 of each of the following may be taken per 1000 points: Plagueclaw Catapult, Unit of Plague Censer Bearers",
+        "name_cn": "如果你的军队包含一个或更多的疫病氏族瘟疫祭司, 每1000分可以各选取0-1个: 瘟疫利爪投石机, 瘟疫香炉僧单位",
+        "name_de": "Wenn deine Armee mindestens einen Clan Pestilens Seuchenpriester enthält, darf pro 1000 Punkte je 0-1 der Folgenden gewählt werden: Seuchenklauen Katapult, Einheit Seuchenschleuderer",
+        "name_es": "Si tu ejército incluye uno o más Sacerdotes de la Plaga del Clan Pestilens, puedes tomar 0-1 de cada uno de los siguientes por cada 1000 puntos: Catapulta Zarpapeste, Unidad de Portaincensarios de la Plaga",
+        "name_fr": "Si votre armée inclut un Prêtre de la Peste du Clan Pestilens ou plus, 0-1 de chacun des suivants peuvent être pris par tranche de 1000 points : Catapulte de la Peste, Unité d’Encenseurs à Peste",
+        "name_it": "If your army includes one or more Clan Pestilens Plague Priests, 0-1 of each of the following may be taken per 1000 points: Plagueclaw Catapult, Unit of Plague Censer Bearers",
+        "name_pl": "If your army includes one or more Clan Pestilens Plague Priests, 0-1 of each of the following may be taken per 1000 points: Plagueclaw Catapult, Unit of Plague Censer Bearers"
       }
     },
     {
@@ -3660,19 +4340,19 @@
       "name_es": "Plague Censer Bearers",
       "name_fr": "Encenseurs à Peste",
       "id": "plague-censer-bearers-renegade",
-      "points": 16,
-      "minimum": 5,
-      "maximum": 0,
-      "minDetachmentSize": 5,
       "armyComposition": {
         "sk-renegade": {
           "category": "rare"
         }
       },
+      "points": 16,
+      "minimum": 5,
+      "maximum": 0,
+      "minDetachmentSize": 5,
       "command": [],
       "equipment": [
         {
-          "name_en": "Hand weapons, Plague censers",
+          "name_en": "Hand weapons, Plague censers {renegade}",
           "name_cn": "单手武器, 瘟疫香炉",
           "name_de": "Handwaffe, Seuchenschleuder",
           "name_es": "Hand weapons, Plague censers",
@@ -3688,11 +4368,11 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Frenzy, Scurry Away, Skirmishers, Stubborn, Warband, Hatred (all enemies), Detachment, Plague Disciples",
-        "name_cn": "狂暴, 抱头鼠窜, 散兵, 坚毅, 战帮, Hatred (all enemies), Detachment, Plague Disciples",
-        "name_de": "Raserei, Nichts wie weg!, Plänkler, Unnachgiebig, Kriegerschar, Hass (alle Feinde), Abteilung, Seuchenjünger",
-        "name_es": "Furia asesina, ¡Sálvese quien pueda!, Hostigadores, Tozudo, Partida de Guerra, Odio (a todos los enemigos), Destacamento, Discípulos de la Plaga",
-        "name_fr": "Frénésie, Sauve qui Peut!, Tirailleurs, Obstiné, Bande de Guerre, Hatred (all enemies), Detachment, Plague Disciples"
+        "name_en": "Frenzy, Scurry Away, Skirmishers, Stubborn, Warband, Hatred (all enemies), Detachment, Plague Disciples {renegade}",
+        "name_cn": "Frenzy, Scurry Away, Skirmishers, Stubborn, Warband, Hatred (all enemies), Detachment, Plague Disciples",
+        "name_de": "Frenzy, Scurry Away, Skirmishers, Stubborn, Warband, Hatred (all enemies), Detachment, Plague Disciples",
+        "name_es": "Frenzy, Scurry Away, Skirmishers, Stubborn, Warband, Hatred (all enemies), Detachment, Plague Disciples",
+        "name_fr": "Frenzy, Scurry Away, Skirmishers, Stubborn, Warband, Hatred (all enemies), Detachment, Plague Disciples"
       },
       "notes": {
         "name_en": "If your army includes one or more Clan Pestilens Plague Priests, 0-1 of each of the following may be taken per 1000 points: Plagueclaw Catapult, Unit of Plague Censer Bearers",
@@ -3711,20 +4391,20 @@
       "name_es": "Plague Censer Bearers",
       "name_fr": "Encenseurs à Peste",
       "id": "plague-censer-bearers-detachment-renegade",
-      "points": 16,
-      "minimum": 5,
-      "maximum": 0,
-      "detachment": true,
-      "minDetachmentSize": 5,
       "armyComposition": {
         "sk-renegade": {
           "category": "rare"
         }
       },
+      "points": 16,
+      "minimum": 5,
+      "maximum": 0,
+      "detachment": true,
+      "minDetachmentSize": 5,
       "command": [],
       "equipment": [
         {
-          "name_en": "Hand weapons, Plague censers",
+          "name_en": "Hand weapons, Plague censers {renegade}",
           "name_cn": "单手武器, 瘟疫香炉",
           "name_de": "Handwaffe, Seuchenschleuder",
           "name_es": "Hand weapons, Plague censers",
@@ -3740,7 +4420,7 @@
       "items": [],
       "lores": [],
       "specialRules": {
-        "name_en": "Frenzy, Scurry Away, Skirmishers, Stubborn, Warband, Hatred (all enemies), Detachment, Plague Disciples",
+        "name_en": "Frenzy, Scurry Away, Skirmishers, Stubborn, Warband, Hatred (all enemies), Detachment, Plague Disciples {renegade}",
         "name_cn": "狂暴, 抱头鼠窜, 散兵, 坚毅, 战帮, Hatred (all enemies), Detachment, Plague Disciples",
         "name_de": "Raserei, Nichts wie weg!, Plänkler, Unnachgiebig, Kriegerschar, Hass (alle Feinde), Abteilung, Seuchenjünger",
         "name_es": "Furia asesina, ¡Sálvese quien pueda!, Hostigadores, Tozudo, Partida de Guerra, Odio (a todos los enemigos), Destacamento, Discípulos de la Plaga",

@@ -2107,6 +2107,137 @@
       "name": "virtue of discipline"
     }
   ],
+  "pledges-of-honour": [
+    {
+      "name_de": "Pledge of Conquest",
+      "name_en": "Pledge of Conquest",
+      "name_cn": "Pledge of Conquest",
+      "name_fr": "Pledge of Conquest",
+      "name_it": "Pledge of Conquest",
+      "name": "pledge of conquest",
+      "points": 0,
+      "type": "pledge-of-honour"
+    },
+    {
+      "name_de": "Pledge of the Dead",
+      "name_en": "Pledge of the Dead",
+      "name_cn": "Pledge of the Dead",
+      "name_fr": "Pledge of the Dead",
+      "name_it": "Pledge of the Dead",
+      "name": "pledge of the dead",
+      "points": 0,
+      "type": "pledge-of-honour",
+      "onePerArmy": true
+    },
+    {
+      "name_de": "Pledge of the Hunter",
+      "name_en": "Pledge of the Hunter",
+      "name_cn": "Pledge of the Hunter",
+      "name_fr": "Pledge of the Hunter",
+      "name_it": "Pledge of the Hunter",
+      "name": "pledge of the hunter",
+      "points": 0,
+      "type": "pledge-of-honour",
+      "onePerArmy": true
+    },
+    {
+      "name_de": "Pledge of the Mage-slayer",
+      "name_en": "Pledge of the Mage-slayer",
+      "name_cn": "Pledge of the Mage-slayer",
+      "name_fr": "Pledge of the Mage-slayer",
+      "name_it": "Pledge of the Mage-slayer",
+      "name": "pledge of the mage-slayer",
+      "points": 0,
+      "type": "pledge-of-honour"
+    },
+    {
+      "name_de": "Pledge of Victory",
+      "name_en": "Pledge of Victory",
+      "name_cn": "Pledge of Victory",
+      "name_fr": "Pledge of Victory",
+      "name_it": "Pledge of Victory",
+      "name": "pledge of victory",
+      "points": 0,
+      "type": "pledge-of-honour",
+      "onePerArmy": true
+    },
+    {
+      "name_de": "Pledge of Wrath",
+      "name_en": "Pledge of Wrath",
+      "name_cn": "Pledge of Wrath",
+      "name_fr": "Pledge of Wrath",
+      "name_it": "Pledge of Wrath",
+      "name": "pledge of wrath",
+      "points": 0,
+      "type": "pledge-of-honour"
+    }
+  ],
+  "knightly-pledges-of-honour": [
+    {
+      "name_de": "Pledge of the Beast-slayer",
+      "name_en": "Pledge of the Beast-slayer",
+      "name_cn": "Pledge of the Beast-slayer",
+      "name_fr": "Pledge of the Beast-slayer",
+      "name_it": "Pledge of the Beast-slayer",
+      "name": "pledge of the beast-slayer",
+      "points": 0,
+      "type": "knightly-pledge-of-honour",
+      "onePerArmy": true
+    },
+    {
+      "name_de": "Pledge of Liberation",
+      "name_en": "Pledge of Liberation",
+      "name_cn": "Pledge of Liberation",
+      "name_fr": "Pledge of Liberation",
+      "name_it": "Pledge of Liberation",
+      "name": "pledge of liberation",
+      "points": 0,
+      "type": "knightly-pledge-of-honour"
+    },
+    {
+      "name_de": "Pledge of Honourable Warfare",
+      "name_en": "Pledge of Honourable Warfare",
+      "name_cn": "Pledge of Honourable Warfare",
+      "name_fr": "Pledge of Honourable Warfare",
+      "name_it": "Pledge of Honourable Warfare",
+      "name": "pledge of honourable warfare",
+      "points": 0,
+      "type": "knightly-pledge-of-honour",
+      "onePerArmy": true
+    },
+    {
+      "name_de": "Pledge of Protection",
+      "name_en": "Pledge of Protection",
+      "name_cn": "Pledge of Protection",
+      "name_fr": "Pledge of Protection",
+      "name_it": "Pledge of Protection",
+      "name": "pledge of protection",
+      "points": 0,
+      "type": "knightly-pledge-of-honour",
+      "onePerArmy": true
+    },
+    {
+      "name_de": "Pledge of Swift Rebuttal",
+      "name_en": "Pledge of Swift Rebuttal",
+      "name_cn": "Pledge of Swift Rebuttal",
+      "name_fr": "Pledge of Swift Rebuttal",
+      "name_it": "Pledge of Swift Rebuttal",
+      "name": "pledge of swift rebuttal",
+      "points": 0,
+      "type": "knightly-pledge-of-honour"
+    },
+    {
+      "name_de": "Pledge of Annihilation",
+      "name_en": "Pledge of Annihilation",
+      "name_cn": "Pledge of Annihilation",
+      "name_fr": "Pledge of Annihilation",
+      "name_it": "Pledge of Annihilation",
+      "name": "pledge of annihilation",
+      "points": 0,
+      "type": "knightly-pledge-of-honour",
+      "onePerArmy": true
+    }
+  ],
   "empire-of-man": [
     {
       "name_de": "Runenklinge",
@@ -6373,7 +6504,7 @@
     },
     {
       "name_de": "Armour of Bazherak the Cruel",
-      "name_en": "Armour of Bazherak the Cruel",
+      "name_en": "Armour of Bazherak the Cruel {renegade}",
       "name_cn": "残酷者巴泽拉克之甲",
       "name_fr": "Armure de Bazherak le Cruel",
       "name_it": "Armour of Bazherak the Cruel",
@@ -6411,7 +6542,7 @@
     },
     {
       "name_de": "Mantle of Stone*",
-      "name_en": "Mantle of Stone*",
+      "name_en": "Mantle of Stone* {renegade}",
       "name_cn": "岩石斗篷*",
       "name_fr": "Manteau de Pierre*",
       "name_it": "Mantle of Stone*",
@@ -6454,7 +6585,20 @@
       "points": 30,
       "type": "banner",
       "onePerArmy": true,
-      "name": "ashen banner"
+      "name": "ashen banner",
+      "armyComposition": "chaos-dwarfs"
+    },
+    {
+      "name_de": "Ashen Banner",
+      "name_en": "Ashen Banner {renegade}",
+      "name_cn": "苍白之旗",
+      "name_fr": "Bannière Cendrée",
+      "name_it": "Ashen Banner",
+      "points": 30,
+      "type": "banner",
+      "onePerArmy": true,
+      "name": "ashen banner",
+      "armyComposition": "cd-renegade"
     },
     {
       "name_de": "Overseer's Sigil",
@@ -6600,7 +6744,20 @@
       "points": 40,
       "type": "armor",
       "onePerArmy": true,
-      "name": "shield of the mirror pool"
+      "name": "shield of the mirror pool",
+      "armyComposition": "lizardmen"
+    },
+    {
+      "name_de": "Shild des Spiegelsees",
+      "name_en": "Shield of the Mirror Pool {renegade}",
+      "name_cn": "镜湖盾牌",
+      "name_fr": "Bouclier du Bassin Miroitant",
+      "name_it": "Scudo of the Mirror Pool",
+      "points": 40,
+      "type": "armor",
+      "onePerArmy": true,
+      "name": "shield of the mirror pool",
+      "armyComposition": "lm-renegade"
     },
     {
       "name_de": "Kampfechsenhaut",
@@ -6649,7 +6806,7 @@
     },
     {
       "name_de": "Sonnenstandarte des Chotec",
-      "name_en": "Sun Standard of Chotec",
+      "name_en": "Sun Standard of Chotec {renegade}",
       "name_cn": "辍特克日光旗",
       "name_fr": "Étendard du Soleil de Chotec",
       "name_it": "Sun Standard of Chotec",
@@ -6695,7 +6852,7 @@
     },
     {
       "name_de": "Jaguarstandarte",
-      "name_en": "Jaguar Standard",
+      "name_en": "Jaguar Standard {renegade}",
       "name_cn": "美洲豹之旗",
       "name_fr": "Bannière du Jaguar",
       "name_it": "Jaguar Standard",
@@ -6725,7 +6882,20 @@
       "points": 15,
       "type": "enchanted-item",
       "onePerArmy": true,
-      "name": "venom of the firefly frog"
+      "name": "venom of the firefly frog",
+      "armyComposition": "lizardmen"
+    },
+    {
+      "name_de": "Feuerfroschgift",
+      "name_en": "Venom of the Firefly Frog {renegade}",
+      "name_cn": "萤火虫蟾蜍毒液",
+      "name_fr": "Venin du Crapaud Luciole",
+      "name_it": "Venom of the Firefly Frog",
+      "points": 15,
+      "type": "enchanted-item",
+      "onePerArmy": true,
+      "name": "venom of the firefly frog",
+      "armyComposition": "lm-renegade"
     },
     {
       "name_de": "Hörnerechse*",
@@ -6766,7 +6936,7 @@
     },
     {
       "name_de": "Itxi-Larven*",
-      "name_en": "Itxi Grub*",
+      "name_en": "Itxi Grub* {renegade}",
       "name_cn": "埃希蛆虫干*",
       "name_fr": "Larve d’Itxi*",
       "name_it": "Itxi Grub*",
@@ -6792,36 +6962,63 @@
   "disciplines-old-ones": [
     {
       "name_de": "The Focused Rumination",
-      "name_en": "The Focused Rumination",
+      "name_en": "The Focused Rumination {renegade}",
       "name_cn": "The Focused Rumination",
       "name_fr": "The Focused Rumination",
       "name_it": "The Focused Rumination",
       "points": 65,
       "type": "discipline-old-ones",
+      "onePerArmy": true,
+      "name": "the focused rumination",
+      "armyComposition": "lm-renegade"
+    },
+    {
+      "name_de": "Higher State of Mind",
+      "name_en": "Higher State of Mind",
+      "name_cn": "高位自觉",
+      "name_fr": "État Supérieur de Conscience",
+      "name_it": "Higher State of Mente",
+      "points": 60,
+      "type": "discipline-old-ones",
       "onePerArmy": false,
-      "name": "the focused rumination"
+      "name": "higher state of mind",
+      "armyComposition": "lizardmen"
     },
     {
       "name_de": "Higher State of Consciousness",
-      "name_en": "Higher State of Consciousness",
+      "name_en": "Higher State of Consciousness {renegade}",
       "name_cn": "Higher State of Consciousness",
       "name_fr": "Higher State of Consciousness",
       "name_it": "Higher State of Consciousness",
       "points": 60,
       "type": "discipline-old-ones",
-      "onePerArmy": false,
-      "name": "higher state of consciousness"
+      "onePerArmy": true,
+      "name": "higher state of consciousness",
+      "armyComposition": "lm-renegade"
     },
     {
       "name_de": "Focus of Mystery",
-      "name_en": "Focus of Mystery",
+      "name_en": "Focus of Mystery {renegade}",
       "name_cn": "Focus of Mystery",
       "name_fr": "Focus of Mystery",
       "name_it": "Focus of Mystery",
       "points": 45,
       "type": "discipline-old-ones",
+      "onePerArmy": true,
+      "name": "focus of mystery",
+      "armyComposition": "lm-renegade"
+    },
+    {
+      "name_de": "Becalming Cogitation",
+      "name_en": "Becalming Cogitation",
+      "name_cn": "定心熟虑",
+      "name_fr": "Aphorisme Apaisant",
+      "name_it": "Becalming Cogitation",
+      "points": 50,
+      "type": "discipline-old-ones",
       "onePerArmy": false,
-      "name": "focus of mystery"
+      "name": "becalming cogitation",
+      "armyComposition": "lizardmen"
     },
     {
       "name_de": "Wandering Deliberations",
@@ -6829,10 +7026,23 @@
       "name_cn": "游离深思",
       "name_fr": "Réflexions Vagabondes",
       "name_it": "Wandering Deliberations",
-      "points": 35,
+      "points": 40,
       "type": "discipline-old-ones",
       "onePerArmy": false,
-      "name": "wandering deliberations"
+      "name": "wandering deliberations",
+      "armyComposition": "lizardmen"
+    },
+    {
+      "name_de": "Wandering Deliberations",
+      "name_en": "Wandering Deliberations {renegade}",
+      "name_cn": "游离深思",
+      "name_fr": "Réflexions Vagabondes",
+      "name_it": "Wandering Deliberations",
+      "points": 35,
+      "type": "discipline-old-ones",
+      "onePerArmy": true,
+      "name": "wandering deliberations",
+      "armyComposition": "lm-renegade"
     },
     {
       "name_de": "Transcendent Healing",
@@ -6842,19 +7052,32 @@
       "name_it": "Transcendent Healing",
       "points": 35,
       "type": "discipline-old-ones",
-      "onePerArmy": false,
-      "name": "transcendent healing"
+      "name": "transcendent healing",
+      "armyComposition": "lizardmen"
+    },
+    {
+      "name_de": "Transcendent Healing",
+      "name_en": "Transcendent Healing",
+      "name_cn": "至上疗愈",
+      "name_fr": "Guérison Transcendantale",
+      "name_it": "Transcendent Healing",
+      "points": 35,
+      "type": "discipline-old-ones",
+      "onePerArmy": true,
+      "name": "transcendent healing",
+      "armyComposition": "lm-renegade"
     },
     {
       "name_de": "Becalming Cogitation",
-      "name_en": "Becalming Cogitation",
+      "name_en": "Becalming Cogitation {renegade}",
       "name_cn": "定心熟虑",
       "name_fr": "Aphorisme Apaisant",
       "name_it": "Becalming Cogitation",
       "points": 30,
       "type": "discipline-old-ones",
-      "onePerArmy": false,
-      "name": "becalming cogitation"
+      "onePerArmy": true,
+      "name": "becalming cogitation",
+      "armyComposition": "lm-renegade"
     },
     {
       "name_de": "Sorcerous Void",
@@ -6862,10 +7085,23 @@
       "name_cn": "虚空杂音",
       "name_fr": "Présence Surnaturelle",
       "name_it": "Sorcerous Void",
-      "points": 25,
+      "points": 30,
       "type": "discipline-old-ones",
       "onePerArmy": false,
-      "name": "sorcerous void"
+      "name": "sorcerous void",
+      "armyComposition": "lizardmen"
+    },
+    {
+      "name_de": "Sorcerous Void",
+      "name_en": "Sorcerous Void {renegade}",
+      "name_cn": "虚空杂音",
+      "name_fr": "Présence Surnaturelle",
+      "name_it": "Sorcerous Void",
+      "points": 25,
+      "type": "discipline-old-ones",
+      "onePerArmy": true,
+      "name": "sorcerous void",
+      "armyComposition": "lm-renegade"
     },
     {
       "name_de": "Harrowing Scrutiny",
@@ -6875,8 +7111,32 @@
       "name_it": "Harrowing Scrutiny",
       "points": 20,
       "type": "discipline-old-ones",
-      "onePerArmy": false,
-      "name": "harrowing scrutiny"
+      "name": "harrowing scrutiny",
+      "armyComposition": "lizardmen"
+    },
+    {
+      "name_de": "Harrowing Scrutiny",
+      "name_en": "Harrowing Scrutiny",
+      "name_cn": "犁心详察",
+      "name_fr": "Regard Pénétrant",
+      "name_it": "Harrowing Scrutiny",
+      "points": 20,
+      "type": "discipline-old-ones",
+      "onePerArmy": true,
+      "name": "harrowing scrutiny",
+      "armyComposition": "lm-renegade"
+    },
+    {
+      "name_de": "Soul of Stone",
+      "name_en": "Soul of Stone {renegade}",
+      "name_cn": "顽石之魂",
+      "name_fr": "Âme de Marbre",
+      "name_it": "Anima of Stone",
+      "points": 15,
+      "type": "discipline-old-ones",
+      "onePerArmy": true,
+      "name": "soul of stone",
+      "armyComposition": "lm-renegade"
     },
     {
       "name_de": "Soul of Stone",
@@ -6884,10 +7144,11 @@
       "name_cn": "顽石之魂",
       "name_fr": "Âme de Marbre",
       "name_it": "Anima of Stone",
-      "points": 15,
+      "points": 10,
       "type": "discipline-old-ones",
       "onePerArmy": false,
-      "name": "soul of stone"
+      "name": "soul of stone",
+      "armyComposition": "lizardmen"
     }
   ],
   "dark-elves": [
@@ -6938,7 +7199,7 @@
     },
     {
       "name_de": "Peitsche der Qualen",
-      "name_en": "Whip of Agony",
+      "name_en": "Whip of Agony {renegade}",
       "name_cn": "痛苦之鞭",
       "name_fr": "Fouet de l’Agonie",
       "name_it": "Whip of Agony",
@@ -7006,7 +7267,7 @@
     },
     {
       "name_de": "Banner von Nagarythe",
-      "name_en": "Banner of Nagarythe",
+      "name_en": "Banner of Nagarythe {renegade}",
       "name_cn": "纳加瑞斯之旗",
       "name_fr": "Bannière de Nagarythe",
       "name_it": "Banner of Nagarythe",
@@ -7071,7 +7332,20 @@
       "points": 35,
       "type": "enchanted-item",
       "onePerArmy": true,
-      "name": "black dragon egg"
+      "name": "black dragon egg",
+      "armyComposition": "dark-elves"
+    },
+    {
+      "name_de": "Schwarzes Drachenei",
+      "name_en": "Black Dragon Egg {renegade}",
+      "name_cn": "黑龙卵",
+      "name_fr": "Œuf de Dragon Noir",
+      "name_it": "Black Drago Egg",
+      "points": 35,
+      "type": "enchanted-item",
+      "onePerArmy": true,
+      "name": "black dragon egg",
+      "armyComposition": "de-renegade"
     },
     {
       "name_de": "Fänge der Hydra",
@@ -7169,7 +7443,20 @@
       "points": 90,
       "type": "weapon",
       "onePerArmy": true,
-      "name": "thundermace"
+      "name": "thundermace",
+      "armyComposition": "ogre-kingdoms"
+    },
+    {
+      "name_de": "Donnerkeule",
+      "name_en": "Thundermace {renegade}",
+      "name_cn": "雷霆权杖",
+      "name_fr": "Masse-tonnerre",
+      "name_it": "Thundermace",
+      "points": 90,
+      "type": "weapon",
+      "onePerArmy": true,
+      "name": "thundermace",
+      "armyComposition": "ok-renegade"
     },
     {
       "name_de": "Fleischklopfer",
@@ -7206,7 +7493,7 @@
     },
     {
       "name_de": "Bauchschlud",
-      "name_en": "Gut Maw",
+      "name_en": "Gut Maw {renegade}",
       "name_cn": "大胃护腹",
       "name_fr": "Plaque Ventrale de La Gueule",
       "name_it": "Gut Maw",
@@ -7243,7 +7530,7 @@
     },
     {
       "name_de": "Glanzsplitter",
-      "name_en": "Spangleshard",
+      "name_en": "Spangleshard {renegade}",
       "name_cn": "闪光碎片",
       "name_fr": "Éclat Scintillant",
       "name_it": "Spangleshard",
@@ -7275,11 +7562,25 @@
       "type": "talisman",
       "stackable": true,
       "onePerArmy": false,
-      "name": "cathayan jet pendant"
+      "name": "cathayan jet pendant",
+      "armyComposition": "ogre-kingdoms"
+    },
+    {
+      "name_de": "Cathayanisches Schutzhalsband*",
+      "name_en": "Cathayan Jet Pendant* {renegade}",
+      "name_cn": "震旦墨玉吊坠*",
+      "name_fr": "Pendentif de Jais Cathayen*",
+      "name_it": "Cathayan Jet Pendant*",
+      "points": 10,
+      "type": "talisman",
+      "stackable": true,
+      "onePerArmy": false,
+      "name": "cathayan jet pendant",
+      "armyComposition": "ok-renegade"
     },
     {
       "name_de": "Drachenhautbanner",
-      "name_en": "Dragonhide Banner",
+      "name_en": "Dragonhide Banner {renegade}",
       "name_cn": "龙皮旗帜",
       "name_fr": "Bannière en Peau de Dragon",
       "name_it": "Dragonhide Banner",
@@ -7371,7 +7672,7 @@
     },
     {
       "name_de": "Gruts Sichel",
-      "name_en": "Grut's Sickle",
+      "name_en": "Grut's Sickle {renegade}",
       "name_cn": "格鲁特之镰",
       "name_fr": "Serpe de Grut",
       "name_it": "Grut's Sickle",
@@ -7403,7 +7704,7 @@
       "name": "hellheart"
     },
     {
-      "name_en": "Tooth-Gnoblar*",
+      "name_en": "Tooth-Gnoblar* {renegade}",
       "name_de": "Tooth-Gnoblar*",
       "name_cn": "Tooth-Gnoblar*",
       "name_fr": "Tooth-Gnoblar*",
@@ -7420,7 +7721,7 @@
   "big-names": [
     {
       "name_de": "Bestienschlächter",
-      "name_en": "Beastkiller",
+      "name_en": "Beastkiller {renegade}",
       "name_cn": "屠兽者",
       "name_fr": "Trucide-fauve",
       "name_it": "Beastkiller",
@@ -7432,7 +7733,7 @@
     },
     {
       "name_de": "Schlundpilger",
-      "name_en": "Mawseeker",
+      "name_en": "Mawseeker {renegade}",
       "name_cn": "大胃朝圣者",
       "name_fr": "Cherche-gueule",
       "name_it": "Mawseeker",
@@ -7456,7 +7757,7 @@
     },
     {
       "name_de": "Wallcrusher",
-      "name_en": "Wallcrusher",
+      "name_en": "Wallcrusher {renegade}",
       "name_cn": "Wallcrusher",
       "name_fr": "Wallcrusher",
       "name_it": "Wallcrusher",
@@ -7468,7 +7769,7 @@
     },
     {
       "name_de": "Bergfresser",
-      "name_en": "Mountaineater",
+      "name_en": "Mountaineater {renegade}",
       "name_cn": "吞山者",
       "name_fr": "Mange-montagne",
       "name_it": "Mountaineater",
@@ -7499,7 +7800,20 @@
       "points": 20,
       "type": "big-name",
       "onePerArmy": false,
-      "name": "giantbreaker"
+      "name": "giantbreaker",
+      "armyComposition": "ogre-kingdoms"
+    },
+    {
+      "name_de": "Riesenbrecher",
+      "name_en": "Giantbreaker {renegade}",
+      "name_cn": "巨人击破者",
+      "name_fr": "Brise-géant",
+      "name_it": "Giantbreaker",
+      "points": 20,
+      "type": "big-name",
+      "onePerArmy": false,
+      "name": "giantbreaker",
+      "armyComposition": "ok-renegade"
     },
     {
       "name_de": "Sippenfresser",
@@ -7510,7 +7824,20 @@
       "points": 15,
       "type": "big-name",
       "onePerArmy": false,
-      "name": "kineater"
+      "name": "kineater",
+      "armyComposition": "ogre-kingdoms"
+    },
+    {
+      "name_de": "Sippenfresser",
+      "name_en": "Kineater {renegade}",
+      "name_cn": "噬亲者",
+      "name_fr": "Mâche-frère",
+      "name_it": "Kineater",
+      "points": 15,
+      "type": "big-name",
+      "onePerArmy": false,
+      "name": "kineater",
+      "armyComposition": "ok-renegade"
     },
     {
       "name_de": "Sturmläufer",
@@ -7521,7 +7848,20 @@
       "points": 10,
       "type": "big-name",
       "onePerArmy": false,
-      "name": "longstrider"
+      "name": "longstrider",
+      "armyComposition": "ogre-kingdoms"
+    },
+    {
+      "name_de": "Sturmläufer",
+      "name_en": "Longstrider {renegade}",
+      "name_cn": "远行者",
+      "name_fr": "Longues-jambes",
+      "name_it": "Longstrider",
+      "points": 10,
+      "type": "big-name",
+      "onePerArmy": false,
+      "name": "longstrider",
+      "armyComposition": "ok-renegade"
     },
     {
       "name_de": "Bestienschlächter",
@@ -7544,10 +7884,36 @@
       "points": 5,
       "type": "big-name",
       "onePerArmy": false,
-      "name": "deathcheater"
+      "name": "deathcheater",
+      "armyComposition": "ogre-kingdoms"
+    },
+    {
+      "name_de": "Todpreller",
+      "name_en": "Deathcheater {renegade}",
+      "name_cn": "诈死者",
+      "name_fr": "Trompe-la-mort",
+      "name_it": "Deathcheater",
+      "points": 5,
+      "type": "big-name",
+      "onePerArmy": false,
+      "name": "deathcheater",
+      "armyComposition": "ok-renegade"
     }
   ],
   "skaven": [
+    {
+      "name_de": "Die Fellklinge",
+      "name_en": "The Fellblade",
+      "name_cn": "堕落之刃",
+      "name_es": "La hoja caída",
+      "name_fr": "Lame Fatale",
+      "name_it": "The Fellblade",
+      "points": 100,
+      "type": "weapon",
+      "onePerArmy": true,
+      "name": "the fellblade",
+      "armyComposition": "skaven"
+    },
     {
       "name_de": "Die Fellklinge",
       "name_en": "The Fellblade {renegade}",
@@ -7558,11 +7924,12 @@
       "points": 100,
       "type": "weapon",
       "onePerArmy": true,
-      "name": "the fellblade"
+      "name": "the fellblade",
+      "armyComposition": "sk-renegade"
     },
     {
       "name_de": "Weinende Klinge",
-      "name_en": "Weeping Blade {renegade}",
+      "name_en": "Weeping Blade",
       "name_cn": "悲泣之刃",
       "name_es": "Hoja llorona",
       "name_fr": "Lame Suintante",
@@ -7575,7 +7942,7 @@
     },
     {
       "name_de": "Weinende Klinge",
-      "name_en": "Weeping Blade",
+      "name_en": "Weeping Blade {renegade}",
       "name_cn": "悲泣之刃",
       "name_es": "Hoja llorona",
       "name_fr": "Lame Suintante",
@@ -7614,6 +7981,20 @@
     },
     {
       "name_de": "Todesglobus*",
+      "name_en": "Death Globe*",
+      "name_cn": "死亡之球*",
+      "name_es": "Globo de la muerte*",
+      "name_fr": "Sphère de Mort*",
+      "name_it": "Death Globe*",
+      "points": 25,
+      "stackable": true,
+      "type": "weapon",
+      "onePerArmy": false,
+      "name": "death globe",
+      "armyComposition": "skaven"
+    },
+    {
+      "name_de": "Todesglobus*",
       "name_en": "Death Globe* {renegade}",
       "name_cn": "死亡之球*",
       "name_es": "Globo de la muerte*",
@@ -7623,7 +8004,8 @@
       "stackable": true,
       "type": "weapon",
       "onePerArmy": false,
-      "name": "death globe"
+      "name": "death globe",
+      "armyComposition": "sk-renegade"
     },
     {
       "name_de": "Warpstein-Rüstung*",
@@ -7799,7 +8181,7 @@
     },
     {
       "name_de": "Plague Banner",
-      "name_en": "Plague Banner",
+      "name_en": "Plague Banner {renegade}",
       "name_cn": "Plague Banner",
       "name_es": "Plague Banner",
       "name_fr": "Plague Banner",
@@ -7812,6 +8194,19 @@
     },
     {
       "name_de": "Messingkugel",
+      "name_en": "Brass Orb",
+      "name_cn": "黄铜球",
+      "name_es": "Orbe de latón",
+      "name_fr": "Orbe d’Airain",
+      "name_it": "Brass Orb",
+      "points": 50,
+      "type": "enchanted-item",
+      "onePerArmy": true,
+      "name": "brass orb",
+      "armyComposition": "skaven"
+    },
+    {
+      "name_de": "Messingkugel",
       "name_en": "Brass Orb {renegade}",
       "name_cn": "黄铜球",
       "name_es": "Orbe de latón",
@@ -7820,7 +8215,21 @@
       "points": 50,
       "type": "enchanted-item",
       "onePerArmy": true,
-      "name": "brass orb"
+      "name": "brass orb",
+      "armyComposition": "sk-renegade"
+    },
+    {
+      "name_de": "Skalm",
+      "name_en": "Skalm",
+      "name_cn": "药膏",
+      "name_es": "Skálm",
+      "name_fr": "Skataplasme",
+      "name_it": "Skalm",
+      "points": 35,
+      "type": "enchanted-item",
+      "onePerArmy": true,
+      "name": "skalm",
+      "armyComposition": "skaven"
     },
     {
       "name_de": "Skalm",
@@ -7832,7 +8241,8 @@
       "points": 35,
       "type": "enchanted-item",
       "onePerArmy": true,
-      "name": "skalm"
+      "name": "skalm",
+      "armyComposition": "sk-renegade"
     },
     {
       "name_de": "Skavenbrew*",
@@ -7887,6 +8297,20 @@
     },
     {
       "name_de": "Warpstein-Token*",
+      "name_en": "Warpstone Tokens*",
+      "name_cn": "次元石块*",
+      "name_es": "Fichas de piedra bruja*",
+      "name_fr": "Fragments de Malepierre*",
+      "name_it": "Warpstone Tokens*",
+      "points": 15,
+      "stackable": true,
+      "type": "arcane-item",
+      "onePerArmy": false,
+      "name": "warpstone tokens",
+      "armyComposition": "skaven"
+    },
+    {
+      "name_de": "Warpstein-Token*",
       "name_en": "Warpstone Tokens* {renegade}",
       "name_cn": "次元石块*",
       "name_es": "Fichas de piedra bruja*",
@@ -7896,7 +8320,8 @@
       "stackable": true,
       "type": "arcane-item",
       "onePerArmy": false,
-      "name": "warpstone tokens"
+      "name": "warpstone tokens",
+      "armyComposition": "sk-renegade"
     }
   ],
   "vampire-counts": [
@@ -7967,7 +8392,7 @@
     },
     {
       "name_de": "Kreischendes Banner",
-      "name_en": "The Screaming Banner",
+      "name_en": "The Screaming Banner {renegade}",
       "name_cn": "哀嚎军旗",
       "name_es": "La bandera de los gritos",
       "name_fr": "Bannière Hurlante",
@@ -8245,7 +8670,7 @@
     },
     {
       "name_de": "Ätherklinge",
-      "name_en": "Æther Blade",
+      "name_en": "Æther Blade {renegade}",
       "name_cn": "以太之刃",
       "name_fr": "Lame d’Éther",
       "name_it": "Æther Lama",
@@ -8254,7 +8679,7 @@
       "onePerArmy": true,
       "stackable": true,
       "maximum": 1,
-      "name": "æther blade",
+      "name": "æther blade renegade",
       "armyComposition": "doc-renegade"
     },
     {
@@ -8272,7 +8697,7 @@
     },
     {
       "name_de": "Geflügelter Alptraum",
-      "name_en": "Winged Horror",
+      "name_en": "Winged Horror {renegade}",
       "name_cn": "有翼惧物",
       "name_fr": "Horreur Ailée",
       "name_it": "Winged Horror",
@@ -8281,7 +8706,7 @@
       "onePerArmy": true,
       "stackable": true,
       "maximum": 1,
-      "name": "winged horror",
+      "name": "winged horror renegade",
       "armyComposition": "doc-renegade"
     },
     {
@@ -8367,14 +8792,14 @@
     },
     {
       "name_de": "Banner des unheiligen Sieges",
-      "name_en": "Banner of Unholy Victory",
+      "name_en": "Banner of Unholy Victory {renegade}",
       "name_cn": "不洁胜利之旗",
       "name_fr": "Bannière de Victoire Impie",
       "name_it": "Banner of Unholy Victory",
       "points": 50,
       "type": "daemonic-icon-common",
       "onePerArmy": true,
-      "name": "banner of unholy victory",
+      "name": "banner of unholy victory renegade",
       "armyComposition": "doc-renegade"
     },
     {
@@ -8425,7 +8850,22 @@
       "onePerArmy": true,
       "stackable": true,
       "maximum": 1,
-      "name": "spell eater"
+      "name": "spell eater",
+      "armyComposition": "daemons-of-chaos"
+    },
+    {
+      "name_de": "Spruchfresser",
+      "name_en": "Spell Eater {renegade}",
+      "name_cn": "吞法者",
+      "name_fr": "Mange Sorts",
+      "name_it": "Spell Eater",
+      "points": 50,
+      "type": "daemonic-gift-khorne",
+      "onePerArmy": true,
+      "stackable": true,
+      "maximum": 1,
+      "name": "spell eater renegade",
+      "armyComposition": "doc-renegade"
     },
     {
       "name_de": "Rüstung des Khorne",
@@ -8555,7 +8995,20 @@
       "points": 30,
       "type": "daemonic-icon-khorne",
       "onePerArmy": true,
-      "name": "icon of endless war"
+      "name": "icon of endless war",
+      "armyComposition": "daemons-of-chaos"
+    },
+    {
+      "name_de": "Ikone des ewigen Krieges",
+      "name_en": "Icon of Endless War {renegade}",
+      "name_cn": "无尽之战圣像",
+      "name_fr": "Icône de Guerre Infinie",
+      "name_it": "Icon of Endless War",
+      "points": 30,
+      "type": "daemonic-icon-khorne",
+      "onePerArmy": true,
+      "name": "icon of endless war renegade",
+      "armyComposition": "doc-renegade"
     }
   ],
   "daemonic-gifts-nurgle": [
@@ -8699,7 +9152,22 @@
       "onePerArmy": true,
       "stackable": true,
       "maximum": 1,
-      "name": "infernal enrapturess"
+      "name": "infernal enrapturess",
+      "armyComposition": "daemons-of-chaos"
+    },
+    {
+      "name_de": "Hinreissende Höllenmuse",
+      "name_en": "Infernal Enrapturess {renegade}",
+      "name_cn": "地狱奏乐者",
+      "name_fr": "Enchantement Infernal",
+      "name_it": "Infernal Enrapturess",
+      "points": 50,
+      "type": "daemonic-gift-slaanesh",
+      "onePerArmy": true,
+      "stackable": true,
+      "maximum": 1,
+      "name": "infernal enrapturess renegade",
+      "armyComposition": "doc-renegade"
     },
     {
       "name_de": "Reiz des Slaanesh",
@@ -8764,7 +9232,21 @@
       "stackable": true,
       "type": "daemonic-gift-slaanesh",
       "onePerArmy": false,
-      "name": "enrapturing gaze"
+      "name": "enrapturing gaze",
+      "armyComposition": "daemons-of-chaos"
+    },
+    {
+      "name_de": "Fesselnder Blick*",
+      "name_en": "Enrapturing Gaze* {renegade}",
+      "name_cn": "狂喜凝视*",
+      "name_fr": "Regard Envoûtant*",
+      "name_it": "Enrapturing Gaze*",
+      "points": 20,
+      "stackable": true,
+      "type": "daemonic-gift-slaanesh",
+      "onePerArmy": false,
+      "name": "enrapturing gaze renegade",
+      "armyComposition": "doc-renegade"
     }
   ],
   "daemonic-icons-slaanesh": [
@@ -8782,14 +9264,14 @@
     },
     {
       "name_de": "Banner of Acquiescence",
-      "name_en": "Banner of Acquiescence",
+      "name_en": "Banner of Acquiescence {renegade}",
       "name_cn": "屈从之旗",
       "name_fr": "Bannière du Consentement",
       "name_it": "Banner of Acquiescence",
       "points": 50,
       "type": "daemonic-icon-slaanesh",
       "onePerArmy": true,
-      "name": "banner of acquiescence",
+      "name": "banner of acquiescence renegade",
       "armyComposition": "doc-renegade"
     },
     {
@@ -8805,14 +9287,14 @@
     },
     {
       "name_de": "",
-      "name_en": "Icon of the Eternal Dance",
+      "name_en": "Icon of the Eternal Dance {renegade}",
       "name_cn": "",
       "name_fr": "",
       "name_it": "",
       "points": 25,
       "type": "daemonic-icon-slaanesh",
       "onePerArmy": true,
-      "name": "icon of the eternal dance",
+      "name": "icon of the eternal dance renegade",
       "armyComposition": "doc-renegade"
     },
     {
@@ -8829,14 +9311,14 @@
     },
     {
       "name_de": "Sirenenstandarte",
-      "name_en": "Siren Standard",
+      "name_en": "Siren Standard {renegade}",
       "name_cn": "塞壬战旗",
       "name_fr": "Étendard de la Sirène",
       "name_it": "Siren Standard",
       "points": 15,
       "type": "daemonic-icon-slaanesh",
       "onePerArmy": true,
-      "name": "siren standard",
+      "name": "siren standard renegade",
       "armyComposition": "doc-renegade"
     }
   ],
@@ -8870,7 +9352,7 @@
     },
     {
       "name_de": "Schicksal des Tzeentch",
-      "name_en": "Will of Tzeentch",
+      "name_en": "Will of Tzeentch {renegade}",
       "name_cn": "奸奇意志",
       "name_fr": "Volonté de Tzeentch",
       "name_it": "Will of Tzeentch",
@@ -8879,7 +9361,7 @@
       "onePerArmy": true,
       "stackable": true,
       "maximum": 1,
-      "name": "will of tzeentch",
+      "name": "will of tzeentch renegade",
       "armyComposition": "doc-renegade"
     },
     {
@@ -8965,14 +9447,14 @@
     },
     {
       "name_de": "Banner of Discord",
-      "name_en": "Banner of Discord",
+      "name_en": "Banner of Discord {renegade}",
       "name_cn": "不谐之旗",
       "name_fr": "Bannière de Discorde",
       "name_it": "Banner of Discord",
       "points": 50,
       "type": "daemonic-icon-tzeentch",
       "onePerArmy": true,
-      "name": "banner of discord",
+      "name": "banner of discord renegade",
       "armyComposition": "doc-renegade"
     },
     {
@@ -9011,14 +9493,14 @@
       "type": "daemonic-icon-tzeentch",
       "onePerArmy": false,
       "maximum": 1,
-      "name": "icon of sorcery",
+      "name": "icon of sorcery renegade",
       "armyComposition": "doc-renegade"
     }
   ],
   "vampiric-powers": [
     {
       "name_de": "Red Fury",
-      "name_en": "Red Fury",
+      "name_en": "Red Fury {renegade}",
       "name_cn": "Red Fury",
       "name_es": "Red Fury",
       "name_fr": "Red Fury",
@@ -9046,7 +9528,7 @@
     },
     {
       "name_de": "Fluch des Wiedergängers",
-      "name_en": "Curse of the Revenant",
+      "name_en": "Curse of the Revenant {renegade}",
       "name_cn": "亡魂诅咒",
       "name_es": "Curse of the Revenant",
       "name_fr": "Malédiction du Revenant",
@@ -9073,12 +9555,12 @@
       "armyComposition": "vampire-counts"
     },
     {
-      "name_de": "Honour of Death",
-      "name_en": "Honour of Death {renegade}",
-      "name_cn": "Honour of Death",
-      "name_es": "Honour of Death",
-      "name_fr": "Honour of Death",
-      "name_it": "Honour of Death",
+      "name_de": "Honour or Death",
+      "name_en": "Honour or Death {renegade}",
+      "name_cn": "Honour or Death",
+      "name_es": "Honour or Death",
+      "name_fr": "Honour or Death",
+      "name_it": "Honour or Death",
       "nonExclusive": true,
       "points": 35,
       "type": "vampiric-power",
@@ -9235,7 +9717,21 @@
       "points": 5,
       "type": "forbidden-poison",
       "onePerArmy": false,
-      "name": "black lotus"
+      "name": "black lotus",
+      "armyComposition": "dark-elves"
+    },
+    {
+      "name_de": "Schwarzer Lotus",
+      "name_en": "Black Lotus {renegade}",
+      "name_cn": "黑莲花",
+      "name_es": "Black Lotus",
+      "name_fr": "Lotus Noir",
+      "name_it": "Black Lotus",
+      "points": 5,
+      "type": "forbidden-poison",
+      "onePerArmy": false,
+      "name": "black lotus",
+      "armyComposition": "de-renegade"
     },
     {
       "name_de": "Dunkles Gift",
