@@ -33,6 +33,41 @@ export const Changelog = () => {
           <FormattedMessage id="changelog.title" />
         </h2>
 
+        <h3>v2.5</h3>
+        <p>
+          <time>
+            <i>
+              <FormattedDate
+                value={new Date("2026-11-24 11:11:11")}
+                month="long"
+                day="2-digit"
+                year="numeric"
+              />
+            </i>
+          </time>
+        </p>
+        <ul className="changelog__list">
+          <li>
+            <FormattedMessage
+              id="changelog.change86"
+              values={{
+                b: (msg) => <b>{msg}</b>,
+                a: (msg) => (
+                  <a
+                    href="http://renegade-rules.old-world-builder.com"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    {msg}
+                  </a>
+                ),
+              }}
+            />
+          </li>
+        </ul>
+
+        <hr />
+
         <h3>v2.4</h3>
         <p>
           <time>

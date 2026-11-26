@@ -221,22 +221,22 @@ export const rules = {
             "prince-apophas-the-cursed-scarab-lord",
           ],
           min: 1,
-          "compositionRule": [
+          compositionRule: [
             "open-war",
             "grand-melee",
             "combined-arms",
-            "grand-melee-combined-arms"
-          ]
+            "grand-melee-combined-arms",
+          ],
         },
         {
           ids: ["high-priest", "mortuary-priest"],
           min: 1,
-          "compositionRule": [
+          compositionRule: [
             "open-war",
             "grand-melee",
             "combined-arms",
-            "grand-melee-combined-arms"
-          ]
+            "grand-melee-combined-arms",
+          ],
         },
         {
           ids: [
@@ -247,12 +247,12 @@ export const rules = {
           min: 0,
           max: 1,
           points: 1000,
-          "compositionRule": [
+          compositionRule: [
             "open-war",
             "grand-melee",
             "combined-arms",
-            "grand-melee-combined-arms"
-          ]
+            "grand-melee-combined-arms",
+          ],
         },
       ],
     },
@@ -1288,7 +1288,7 @@ export const rules = {
           min: 0,
           max: 1,
           requiresType: "characters",
-          requires: ["centigore-chieftain", "ghorros"],
+          requires: ["warhoof", "ghorros"],
           perUnit: true,
         },
         {
@@ -2922,6 +2922,7 @@ export const rules = {
             "pink-horrors-of-tzeentch-core",
             "blue-horrors-of-tzeentch-core",
             "brimstone-horrors-of-tzeentch",
+            "brimstone-horrors-of-tzeentch-core",
             "flamers-of-tzeentch",
             "screamers-of-tzeentch",
             "burning-chariot-of-tzeentch",
@@ -2983,7 +2984,7 @@ export const rules = {
           ids: [
             "pink-horrors-of-tzeentch-core",
             "blue-horrors-of-tzeentch-core",
-            "brimstone-horrors-of-tzeentch",
+            "brimstone-horrors-of-tzeentch-core",
           ],
           requiresGeneral: true,
           requires: [
@@ -3270,7 +3271,6 @@ export const rules = {
           ids: [
             "blue-horrors-of-tzeentch-core-renegade",
             "brimstone-horrors-of-tzeentch-core-renegade",
-            "brimstone-horrors-of-tzeentch-renegade",
           ],
           requiresGeneral: true,
           requires: [
@@ -4605,7 +4605,7 @@ export const rules15 = {
             "blue-horrors-of-tzeentch",
             "pink-horrors-of-tzeentch-core",
             "blue-horrors-of-tzeentch-core",
-            "brimstone-horrors-of-tzeentch",
+            "brimstone-horrors-of-tzeentch-core",
             "flamers-of-tzeentch",
             "screamers-of-tzeentch",
             "burning-chariot-of-tzeentch",
@@ -4665,7 +4665,7 @@ export const rules15 = {
             "blue-horrors-of-tzeentch",
             "pink-horrors-of-tzeentch-core",
             "blue-horrors-of-tzeentch-core",
-            "brimstone-horrors-of-tzeentch",
+            "brimstone-horrors-of-tzeentch-core",
             "flamers-of-tzeentch",
             "screamers-of-tzeentch",
             "burning-chariot-of-tzeentch",

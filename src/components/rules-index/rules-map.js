@@ -4,7 +4,7 @@ import renegadeRulesMap from "./renegade-rules-map.json";
 import renegadeRulesExport from "./renegade-rules-export.json";
 
 export const WHFB_RULES_URL = "https://tow.whfb.app";
-export const RENEGADE_RULES_URL = "https://renegade-rules.battletown.eu";
+export const RENEGADE_RULES_URL = "http://renegade-rules.old-world-builder.com";
 
 const additionalOWBRules = {
   "throwing spears": { url: "weapons-of-war/throwing-spear" },
@@ -373,7 +373,7 @@ const getRenegadeRuleData = (path, exportData) => ({
  * @returns {{url: string, page?: string, stats?: array}|undefined}
  */
 export const getRuleData = (name = "", armyComposition) => {
-  const isRenegadeList = armyComposition?.includes("renegade");
+  const isRenegadeList = armyComposition?.endsWith("-renegade");
 
   if (isRenegadeList && name.toLowerCase().includes("renegade")) {
     const normalizedName = normalizeRuleName(name);
@@ -390,8 +390,7 @@ export const getRuleData = (name = "", armyComposition) => {
   if (isRenegadeList) {
     const baseName = normalizeRuleName(name.replace(/ *\{[^}]*\}/g, ""));
     const armyRules = renegadeRulesMap.armies[armyComposition] || {};
-    const renegadePath =
-      armyRules[baseName] || armyRules[synonyms[baseName]];
+    const renegadePath = armyRules[baseName] || armyRules[synonyms[baseName]];
 
     if (renegadePath) {
       return getRenegadeRuleData(
@@ -401,9 +400,7 @@ export const getRuleData = (name = "", armyComposition) => {
     }
   }
 
-  const normalizedName = normalizeRuleName(
-    name.replace(/ *\{renegade\}/g, ""),
-  );
+  const normalizedName = normalizeRuleName(name.replace(/ *\{renegade\}/g, ""));
   const ruleData =
     rulesMap[normalizedName] || rulesMap[synonyms[normalizedName]];
 
