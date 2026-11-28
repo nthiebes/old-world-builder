@@ -698,7 +698,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
   const compositionRule = list?.compositionRule;
   const stats = unit.profile?.stats || getStats(unit, unitArmyComposition);
   const notes =
-    unit?.armyComposition?.[unitArmyComposition]?.notes || unit.notes;
+    unit?.armyComposition?.[unitArmyComposition]?.compositionRule?.[compositionRule]?.notes ||
+    unit?.armyComposition?.[unitArmyComposition]?.notes || 
+    unit.notes;
   const lores =
     unit?.armyComposition?.[unitArmyComposition]?.lores || unit.lores;
 
