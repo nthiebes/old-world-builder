@@ -38,7 +38,7 @@ export const Changelog = () => {
           <time>
             <i>
               <FormattedDate
-                value={new Date("2026-11-24 11:11:11")}
+                value={new Date("2026-11-26 11:11:11")}
                 month="long"
                 day="2-digit"
                 year="numeric"
@@ -54,7 +54,7 @@ export const Changelog = () => {
                 b: (msg) => <b>{msg}</b>,
                 a: (msg) => (
                   <a
-                    href="http://renegade-rules.old-world-builder.com"
+                    href="https://renegade-rules.old-world-builder.com"
                     rel="noreferrer"
                     target="_blank"
                   >
