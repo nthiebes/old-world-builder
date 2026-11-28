@@ -324,6 +324,17 @@ export const rules = {
             "grand-melee-combined-arms",
           ],
         },
+        {
+          ids: [
+            "tomb-king",
+            "high-priest",
+            "settra-the-imperishable-the-great-king-of-nehekhara",
+          ],
+          max: 0,
+          compositionRule: [
+            "battle-march",
+          ],
+        },
       ],
     },
     core: {
